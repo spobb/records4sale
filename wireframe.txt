@@ -1,0 +1,58 @@
+first page
+
+
+---------------------------------------
+logo        search bar [basket] account
+
+     images of newly added stuff
+               (hero)
+
+
+    item1   item2   item3   item4           (album cover, album name, artist for each item)
+    
+
+    item1   item2   item3   item4
+
+    
+    item1   item2   item3   item4
+    
+
+    item1   item2   item3   item4
+    
+
+    item1   item2   item3   item4
+
+
+
+details page (popup?)
+
+---------------------------------------
+logo        search bar [basket] account
+
+
+            - album -
+        artist
+        (small font) #genre, #genre, #genre (ex: #metal, #prog)
+        track listing
+
+        about the album (desc, release date)
+
+        price
+        
+
+
+account page
+---------------------------------------
+
+username
+
+basket
+[PAY]
+
+
+
+
+
+
+
+///form to add album///
