@@ -6,7 +6,7 @@ $statement = $pdo->query($sql);
 $results = $statement->fetchAll();
 ?>
 
-<h1>Items</h1>
+<h1>RECORDS</h1>
 <div>
     <?php
     for ($i = 0; $i < count($results); ++$i) {
