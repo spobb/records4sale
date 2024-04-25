@@ -16,16 +16,15 @@
             <ul>
                 <?php
                 $menu = [
-                    'home' => 'HOME',
-                    'contact' => 'CONTACT',
-                    'catalog' => 'CATALOG',
-                    'register' => 'SIGN UP',
-                    'login' => 'SIGN IN',
-                    'logout' => 'SIGN OUT',
-                    'profile' => 'PROFILE',
-                    'item' => 'ITEM',
+                    'home' => 'Home',
+                    'contact' => 'Contact',
+                    'catalog' => 'Catalog',
+                    'register' => '<button>Sign up</button>',
+                    'login' => '<button>Sign in</button>',
+                    // 'logout' => '<button>Sign out</button>',
+                    'profile' => '<img src="img/svg/profile.svg" alt="user profile icon">',
+                    // 'item' => 'Item',
                 ];
-
                 foreach ($menu as $href => $label) {
                     printf('<li><a href="index.php?page=%s">%s</a></li>', $href, $label);
                 }

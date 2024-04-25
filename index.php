@@ -9,8 +9,6 @@ if (isset($_GET['page'])) {
     }
 } else if (isset($_GET['action'])) {
     echo 'action works';
-} else {
-    $page = 'pages/home.html';
 }
 
 include 'skeleton.php';
