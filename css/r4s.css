@@ -14,43 +14,46 @@ main {
 
     /* display: flex; */
     justify-content: center;
+    background: var(--white)
 }
 
-header, footer {
+body > header, 
+body > footer {
     background-color: var(--black);
     padding: 1.5rem;
 }
 
-header {
+body > header {
     border-bottom: 1px solid var(--gray-dark);
-
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-}
 
-header nav {
-    position: static;
-}
+    & nav {
+        position:static;
+    }
 
-header ul {
-    display: flex;
-    justify-content: center;
+    & ul {
+        display: flex;
+        justify-content: center;
+    
+        flex-wrap: wrap;
+    
+        gap: 1rem;
+    }
 
-    gap: 1rem;
-}
-
-header nav ul a {
-    color: var(--white);
-    text-decoration: none;
-
-    font-size: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    & nav ul a {
+        color: var(--white);
+        text-decoration: none;
+    
+        /* font-size: 2vw; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 }
 
 li {
     list-style-type: none;
 }
 
-h1 + div {
+h1 + article {
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
@@ -73,22 +76,25 @@ input, textarea{
 }
 
 button{
-    margin:0.2rem 1rem;
     border:1px solid var(--gray);
     border-radius:5px;
-    background: white;
+    margin:0.2rem 1rem;
     padding:0.3rem 1.5rem;
+
+    background: var(--white);
+    
+    cursor: pointer;
+}
+
+section > h1 {
+    margin: 0;
+    padding: 1rem 0 0.5rem;
+    text-align: center;
 }
 
 .item-card {
-    border: 1px solid red;
-    text-align: left;
-
-}
-
-.item-card div {
-    display: block;
-    padding: .8rem 0 .8rem 14%;
+    display: flex;
+    flex-direction: column;    
 }
 
 .flex-wrapper {
@@ -96,20 +102,29 @@ button{
     justify-content: center;
 }
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid var(--gray-dark);
-
+body > footer {
     box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--gray-dark);
+    color: var(--white);
+    & a {
+        color: var(--white);
+    }
+
+    & *:last-child {
+        grid-column: span 3;
+        text-align: center;
+    }
 }
 
-footer > *:last-child {
-    grid-column: span 3;
-    text-align: center;
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
 }
 
-footer img {
-    max-width: 40vw;
+@media (min-width: 1000px) {
+    body > footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
