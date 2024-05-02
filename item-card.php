@@ -8,7 +8,7 @@
         <p><?= $results[$i]['category_id'] . '<br>' . $results[$i]['genre_id'] ?></p>
         <footer>
             <button>Review</button>
-            <span><?= $results[$i]['price'] . ' €' ?></span>
+            <span class="price"><?= $results[$i]['price'] . '' ?></span>
             <button>Buy</button>
         </footer>
     </div>

@@ -5,13 +5,11 @@ $sql = 'SELECT * FROM item';
 $statement = $pdo->query($sql);
 $results = $statement->fetchAll();
 ?>
-<section>
-    <h1>RECORDS</h1>
-    <article>
-        <?php
-        for ($i = 0; $i < count($results); ++$i) {
-            include 'item-card.php';
-        }
-        ?>
-    </article>
+<h1>RECORDS</h1>
+<section class="item-catalog">
+    <?php
+    for ($i = 0; $i < count($results); ++$i) {
+        include 'item-card.php';
+    }
+    ?>
 </section>
