@@ -3,7 +3,13 @@
         <a href="#" class="artist"><?= $results[$i]['artist'] ?></a>
         <h2 class="title"><?= $results[$i]['label'] ?></h2>
     </div>
-    <img src="img/covers/ghost.jpg" alt="album cover">
+    <img src="
+    <?php printf(
+        './img/covers/%s-%s.jpg',
+        strtolower(str_replace(' ', '-', $results[$i]['artist'])),
+        strtolower(str_replace(' ', '-', $results[$i]['label']))
+    )
+    ?>" alt="album cover">
     <!-- <p><?= $results[$i]['release'] ?></p> -->
     <!-- <p><?= $results[$i]['runtime'] ?></p> -->
     <div>
