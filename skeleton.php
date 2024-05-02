@@ -30,7 +30,7 @@
                 ];
                 foreach ($menu as $href => $label) {
                     if ($href === 'search') {
-                        echo '<li><input type="search"><button>S</button></li>';
+                        echo '<li class="search-bar"><input type="search" name="search" id="search"><button><img src="img/svg/search.svg" alt="magnifying glass icon"></button></li>';
                     } else {
                         printf('<li class="%s"><a href="index.php?page=%s">%s</a></li>', $href, $href, $label);
                     }
@@ -88,6 +88,8 @@
             &copy; <?= date('Y') ?>
         </div>
     </footer>
+
+    <script src="search.js"></script>
 </body>
 
 </html>
