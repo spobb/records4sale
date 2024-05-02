@@ -13,8 +13,9 @@
 <body id="<?= $_GET['page']; ?>">
     <header>
         <nav>
-            <ul>
-                <?php
+            <!-- <ul> -->
+            <?php
+            /*
                 $menu = [
                     'home' => 'Home',
                     'catalog' => 'Catalog',
@@ -35,7 +36,22 @@
                         printf('<li class="%s"><a href="index.php?page=%s">%s</a></li>', $href, $href, $label);
                     }
                 }
-                ?>
+                */
+            ?>
+            <!-- </ul> -->
+
+            <div class="home-buttons">
+                <a href="index.php?page=home" class="home">Home</a>
+                <a href="index.php?page=catalog" class="catalog">Catalog</a>
+            </div>
+            <div class="search-bar" class="search">
+                <input type="search" name="search" id="search"><a href="#"><img src="img/svg/search.svg" alt="magnifying glass icon"></a>
+            </div>
+            <ul class="nav-buttons">
+                <li class="contact"><a href="index.php?page=contact">Contact</a></li>
+                <li class="register"><a href="index.php?page=register"><button>Sign up</button></a></li>
+                <li class="login"><a href="index.php?page=login"><button>Sign In</button></a></li>
+                <li class="profile"><a href="index.php?page=profile"><img src="img/svg/profile.svg" alt="user profile icon"></a></li>
             </ul>
         </nav>
     </header>

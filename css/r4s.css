@@ -24,36 +24,49 @@ body {
 
 body > header,
 body > footer {
-	background-color: var(--black);
+	background-color: var(--gray-light);
 	padding: 1.5rem;
 }
 
 body > header {
-	border-bottom: 1px solid var(--gray-dark);
+	border-bottom: 1px solid var(--gray);
 	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 body > header nav {
 	position: static;
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
 }
 
-body > header ul {
+.home-buttons {
 	display: flex;
-	justify-content: center;
-
-	flex-wrap: wrap;
-
-	gap: 1rem;
+	align-items: center;
+	margin-right: 0;
 }
 
 .search-bar {
 	display: flex;
-	margin: 0 auto;
-	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
 }
 
-body > header > nav ul a {
-	color: var(--white);
+.search-bar a {
+	padding: 0;
+}
+.search-bar img {
+	width: 3rem;
+	height: auto;
+}
+
+.nav-buttons {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+body > header > nav a {
+	color: var(--black);
 	text-decoration: none;
 
 	/* font-size: 2vw; */
@@ -70,12 +83,17 @@ input[type="search"] {
 	width: 100%;
 	border: 0;
 	border-radius: 0;
-	border-bottom: 2px solid var(--white);
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--gray);
+	background: none;
+}
+
+nav input + button {
 	background: none;
 }
 
 input[type="search"]:focus {
-	color: var(--white);
+	color: var(--black);
 	outline: none;
 	/* animation: blink 1s step-start 0s infinite; */
 }
@@ -110,7 +128,7 @@ button {
 	/* margin:0.2rem 1rem; */
 	padding: 0.3rem 1.5rem;
 
-	background: var(--white);
+	background: var(--gray-lightest);
 	cursor: pointer;
 }
 
@@ -120,7 +138,7 @@ input[type="submit"] {
 	/* margin:0.2rem 1rem; */
 	padding: 0.3rem 1.5rem;
 
-	background: var(--white);
+	background: var(--gray-lightest);
 	cursor: pointer;
 }
 
@@ -259,10 +277,10 @@ p {
 body > footer {
 	box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.2);
 	border-top: 1px solid var(--gray-dark);
-	color: var(--white);
+	color: var(--black);
 }
 body > footer a {
-	color: var(--white);
+	color: var(--black);
 }
 
 body > footer *:last-child {
