@@ -43,6 +43,12 @@ body > header ul {
 	gap: 1rem;
 }
 
+body > header li:has(input) {
+	display: flex;
+
+	margin: 0 auto;
+}
+
 body > header > nav ul a {
 	color: var(--white);
 	text-decoration: none;
@@ -122,6 +128,9 @@ h1 {
 	}
 }
 
+@media (max-width: 576px) {
+}
+
 .item-card {
 	max-width: 20rem;
 
@@ -183,4 +192,12 @@ img {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
+}
+
+#login .login {
+	display: none;
+}
+
+#register .register {
+	display: none;
 }

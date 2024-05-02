@@ -1,5 +1,5 @@
 <?php
-$page = 'html';
+$page = 'home';
 
 if (isset($_GET['page'])) {
     if ($_GET['page'] == 'catalog') {

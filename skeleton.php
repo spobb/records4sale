@@ -10,15 +10,18 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body id="<?= $_GET['page']; ?>">
     <header>
         <nav>
             <ul>
                 <?php
                 $menu = [
                     'home' => 'Home',
-                    'contact' => 'Contact',
                     'catalog' => 'Catalog',
+
+                    'search' => 'Search',
+
+                    'contact' => 'Contact',
                     'register' => '<button>Sign up</button>',
                     'login' => '<button>Sign in</button>',
                     // 'logout' => '<button>Sign out</button>',
@@ -26,7 +29,11 @@
                     // 'item' => 'Item',
                 ];
                 foreach ($menu as $href => $label) {
-                    printf('<li><a href="index.php?page=%s">%s</a></li>', $href, $label);
+                    if ($href === 'search') {
+                        echo '<li><input type="search"><button>S</button></li>';
+                    } else {
+                        printf('<li class="%s"><a href="index.php?page=%s">%s</a></li>', $href, $href, $label);
+                    }
                 }
                 ?>
             </ul>
@@ -39,10 +46,11 @@
         if (file_exists($page)) {
             include $page;
         } else {
-            include 'pages/home.html';
+            include 'pages/catalog.php';
         }
         ?>
     </main>
+
     <footer>
         <div>
             <!-- contact info -->
