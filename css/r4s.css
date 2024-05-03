@@ -7,17 +7,17 @@
 	padding: 0;
 }
 
+body {
+	background: var(--white);
+}
+
 main {
-	max-width: 80rem;
+	max-width: 1280px;
 	min-height: 100vh;
 	margin: 0 auto;
 
 	/* display: flex; */
 	justify-content: center;
-}
-
-body {
-	background: var(--white);
 }
 
 /* header  */
@@ -163,7 +163,6 @@ h1 {
 .item-card {
 	display: flex;
 	/* align-items: center; */
-	width: 95vw;
 	padding: 0.5rem;
 }
 
@@ -213,6 +212,7 @@ p {
 		flex-direction: column;
 		margin-bottom: 2rem;
 		width: auto;
+		max-width: 384px;
 	}
 
 	.item-card img {
