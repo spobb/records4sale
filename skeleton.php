@@ -10,7 +10,11 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
-<body id="<?= $_GET['page']; ?>">
+<body id="<?php
+            if (isset($GET['page'])) {
+                $_GET['page'];
+            }
+            ?>">
     <header>
         <nav>
             <!-- <ul> -->
@@ -45,7 +49,7 @@
                 <a href="index.php?page=catalog" class="catalog">Catalog</a>
             </div>
             <div class="search-bar" class="search">
-                <input type="search" name="search" id="search"><a href="#"><img src="img/svg/search.svg" alt="magnifying glass icon"></a>
+                <input type="search" name="search" id="search" placeholder="Search for an album or artist..."><a href="#"><img src="img/svg/search.svg" alt="magnifying glass icon"></a>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
