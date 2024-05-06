@@ -1,21 +1,19 @@
-<?php require_once('include.php') ?>
-
 <article class="item-card">
     <div>
-        <a href="#" class="artist"><?= $results[$i]['artist'] ?></a>
-        <h2 class="title"><?= $results[$i]['label'] ?></h2>
+        <a href="#" class="artist"><?= $row['artist'] ?></a>
+        <h2 class="title"><?= $row['label'] ?></h2>
     </div>
-    <img src="<?= album_cover($results[$i]) ?> " alt="album cover">
-    <!-- <p><?= $results[$i]['release'] ?></p> -->
-    <!-- <p><?= $results[$i]['runtime'] ?></p> -->
+    <img src="<?= album_cover($row) ?> " alt="album cover">
+    <!-- <p><?= $row['release'] ?></p> -->
+    <!-- <p><?= $row['runtime'] ?></p> -->
     <div>
         <p><?=
-            // $results[$i]['category'] . '<br>' .
-            $results[$i]['genre']
+            // $row['category'] . '<br>' .
+            $row['genre']
             ?></p>
         <footer>
             <button>Review</button>
-            <span class="price"><?= $results[$i]['price'] . '' ?></span>
+            <span class="price"><?= $row['price'] . '' ?></span>
             <button>Buy</button>
         </footer>
     </div>

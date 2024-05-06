@@ -1,22 +1,64 @@
 <?php
-require_once('connection.php');
+require 'connection.php';
+require 'include.php';
 
-$sql = 'SELECT item.id, item.label, item.price, item.runtime, c.label as category, g.label as genre, a.label as artist 
-FROM `item`
-LEFT JOIN category c ON c.id = item.category_id
-LEFT JOIN genre g ON g.id = item.genre_id
-LEFT JOIN artist a ON a.id = item.artist_id;';
+if (isset($_REQUEST['action'])) {
+    switch ($_REQUEST['action']) {
+        case 'search':
+            $sql = sprintf(
+                "SELECT
+                i.id,
+                (
+                SELECT
+                    i.label
+                WHERE
+                    i.label LIKE '%%%s%%'
+            ) AS label,
+            i.price,
+            i.runtime,
+            c.label AS category,
+            g.label AS genre,
+            a.label AS artist
+            FROM
+                item i
+            LEFT JOIN category c ON
+                c.id = i.category_id
+            LEFT JOIN genre g ON
+                g.id = i.genre_id
+            LEFT JOIN artist a ON
+                a.id = i.artist_id AND a.label LIKE '%%%s%%' AND i.label LIKE '%%%s%%'",
+                $_REQUEST['search'],
+                $_REQUEST['search'],
+                $_REQUEST['search'],
+                $_REQUEST['search']
+            );
+            break;
+        default:
+            echo 'no action set!';
+            break;
+    }
+} else {
+    $sql = sprintf(
+        "SELECT i.id, i.label, i.price, i.runtime, c.label as category, g.label as genre, a.label as artist 
+        FROM item i
+        LEFT JOIN category c ON c.id = i.category_id 
+        LEFT JOIN genre g ON g.id = i.genre_id 
+        LEFT JOIN artist a ON a.id = i.artist_id"
+    );
+}
+
 $statement = $pdo->query($sql);
 $results = $statement->fetchAll();
+var_dump($results);
 
-// include('home.html');
 ?>
 
-<h1>RECORDS</h1>
+<h1>Our records</h1>
 <section class="item-catalog">
     <?php
-    for ($i = 0; $i < count($results); ++$i) {
-        include 'item-card.php';
+    foreach ($results as $row) {
+        if ($row['label'])
+            include 'item-card.php';
     }
     ?>
 </section>

@@ -11,4 +11,4 @@ if (isset($_GET['page'])) {
     echo 'action works';
 }
 
-include 'skeleton.php';
+include 'pages/skeleton.php';
