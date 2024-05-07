@@ -3,10 +3,9 @@ require 'connection.php';
 require 'include.php';
 
 if (isset($_REQUEST['action'])) {
-    switch ($_REQUEST['action']) {
-        case 'search':
-            $sql = sprintf(
-                "SELECT
+    if ($_REQUEST['action'] == 'search') {
+        $sql = sprintf(
+            "SELECT
                 i.id,
                 (
                 SELECT
@@ -27,13 +26,11 @@ if (isset($_REQUEST['action'])) {
                 g.id = i.genre_id
             LEFT JOIN artist a ON
                 a.id = i.artist_id AND i.label LIKE '%%%s%%'",
-                $_REQUEST['search'],
-                $_REQUEST['search']
-            );
-            break;
-        default:
-            echo 'no action set!';
-            break;
+            $_REQUEST['search'],
+            $_REQUEST['search']
+        );
+    } else {
+        echo 'no action specified!';
     }
 } else {
     $sql = sprintf(

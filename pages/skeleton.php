@@ -23,8 +23,7 @@
     <header>
         <nav>
             <div class="home-buttons">
-                <a href="index.php?page=catalog" class="home">records4sale</a>
-                <!-- <a href="index.php?page=catalog" class="catalog">Catalog</a> -->
+                <a href="index.php?page=home" class="home">records4sale</a>
             </div>
             <div class="search-bar search">
                 <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id=" search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img" id="search-button"></button>
@@ -51,7 +50,7 @@
         if (file_exists($page)) {
             include $page;
         } else {
-            include 'pages/catalog.php';
+            include 'pages/home.php';
         }
         ?>
     </main>
@@ -96,7 +95,8 @@
 
     <script src="js/search.js"></script>
     <script src="js/burger.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/review.js"></script>
+    <script type="module" src="js/stars.js"></script>
 </body>
 
 </html>
