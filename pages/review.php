@@ -6,22 +6,16 @@
 
         <form action="" method="POST">
             <div class="review-stars">
-                <input type="radio" name="stars" id="stars-1">
-                <label for="stars-1"></label>
-                <input type="radio" name="stars" id="stars-2">
-                <label for="stars-2"></label>
-                <input type="radio" name="stars" id="stars-3">
-                <label for="stars-3"></label>
-                <input type="radio" name="stars" id="stars-4">
-                <label for="stars-4"></label>
-                <input type="radio" name="stars" id="stars-5">
-                <label for="stars-5"></label>
+                <input type="radio" name="stars" id="1" class="stars svg-img">
+                <input type="radio" name="stars" id="2" class="stars svg-img">
+                <input type="radio" name="stars" id="3" class="stars svg-img">
+                <input type="radio" name="stars" id="4" class="stars svg-img">
+                <input type="radio" name="stars" id="5" class="stars svg-img">
             </div>
-
-            <label for="message"></label>
-            <textarea name="message" cols="30" rows="10" placeholder="Write a review..."></textarea>
+            <textarea name="review" cols="30" rows="10" placeholder="Write a review..."></textarea>
 
             <button>Send</button>
         </form>
     </div>
 </section>
+<script src="js/stars.js"></script>

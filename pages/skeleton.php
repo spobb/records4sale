@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>records4sale</title>
     <link rel="stylesheet" href="css/r4s.css">
+    <link rel="stylesheet" href="css/queries.css">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -26,7 +28,7 @@
                 <a href="index.php?page=home" class="home">records4sale</a>
             </div>
             <div class="search-bar search">
-                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id=" search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img" id="search-button"></button>
+                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img"></button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
@@ -96,7 +98,6 @@
     <script src="js/search.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/review.js"></script>
-    <script type="module" src="js/stars.js"></script>
 </body>
 
 </html>
