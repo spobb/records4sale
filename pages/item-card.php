@@ -12,9 +12,9 @@
             $row['genre']
             ?></p>
         <footer>
-            <button>Review</button>
+            <button class="button" onclick="getReviewPage();">Review</button>
             <span class="price"><?= $row['price'] . '' ?></span>
-            <button>Buy</button>
+            <button class="button">Buy</button>
         </footer>
     </div>
 </article>

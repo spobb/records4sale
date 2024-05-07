@@ -23,11 +23,11 @@
     <header>
         <nav>
             <div class="home-buttons">
-                <a href="index.php?page=home" class="home">records4sale</a>
-                <a href="index.php?page=catalog" class="catalog">Catalog</a>
+                <a href="index.php?page=catalog" class="home">records4sale</a>
+                <!-- <a href="index.php?page=catalog" class="catalog">Catalog</a> -->
             </div>
             <div class="search-bar search">
-                <input type="search" id="search" placeholder="Search for an album or artist..."><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img" id="search-button"></button>
+                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id=" search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img" id="search-button"></button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
@@ -94,8 +94,9 @@
         </div>
     </footer>
 
-    <script src="search.js"></script>
-    <script src="burger.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
