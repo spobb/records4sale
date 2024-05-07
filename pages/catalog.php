@@ -26,9 +26,7 @@ if (isset($_REQUEST['action'])) {
             LEFT JOIN genre g ON
                 g.id = i.genre_id
             LEFT JOIN artist a ON
-                a.id = i.artist_id AND a.label LIKE '%%%s%%' AND i.label LIKE '%%%s%%'",
-                $_REQUEST['search'],
-                $_REQUEST['search'],
+                a.id = i.artist_id AND i.label LIKE '%%%s%%'",
                 $_REQUEST['search'],
                 $_REQUEST['search']
             );
@@ -49,7 +47,6 @@ if (isset($_REQUEST['action'])) {
 
 $statement = $pdo->query($sql);
 $results = $statement->fetchAll();
-var_dump($results);
 
 ?>
 
