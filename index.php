@@ -2,13 +2,17 @@
 $page = 'home';
 
 if (isset($_GET['page'])) {
-    if ($_GET['page'] == 'catalog') {
-        $page = 'catalog.php';
-    } else {
-        $page = 'pages/' . $_GET['page'] . '.html';
+    switch ($_GET['page']) {
+        case 'profile':
+            $page = 'pages/profile.php';
+            break;
+        case 'home':
+            $page = 'pages/home.php';
+            break;
+        default:
+            $page = 'pages/' . $_GET['page'] . '.html';
+            break;
     }
-} else if (isset($_GET['action'])) {
-    echo 'action works';
 }
 
 include 'pages/skeleton.php';
