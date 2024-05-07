@@ -12,7 +12,7 @@ $('#search').on('input', e => {
 $('#search-button').click(() => {
     let input = $('input#search').val().toLowerCase();
     if(input.length) {
-        $.ajax({url:'pages/catalog.php',
+        $.ajax({url:'pages/home.php',
                 data: {action: 'search', search: input},
                 type: 'POST',
             success: (data) => {
