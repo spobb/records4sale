@@ -6,37 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>records4sale</title>
     <link rel="stylesheet" href="css/r4s.css">
-    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/queries.css" media="(min-width:576px)">
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width:1024px)">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
 </head>
 
 <body id="<?php
-            if (isset($GET['page'])) {
-                $_GET['page'];
+            if (isset($_GET['page'])) {
+                echo $_GET['page'];
             }
             ?>">
     <header>
         <nav>
             <div class="home-buttons">
-                <a href="index.php?page=home" class="home">records4sale</a>
+                <a href="index.php?page=home" class="home"><img src="img/text-logo.png" alt="logo image"></a>
             </div>
             <div class="search-bar search">
-                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg-img"></button>
+                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
                 <li class="register"><a href="index.php?page=register"><button>Sign up</button></a></li>
                 <li class="login"><a href="index.php?page=login"><button>Sign In</button></a></li>
-                <li class="profile"><a href="index.php?page=profile"><img src="img/svg/profile.svg" alt="user profile icon" class="svg-img"></a></li>
+                <li class="profile"><a href="index.php?page=profile"><img src="img/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
-            <img src="img/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg-img">
+            <img src="img/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
         </nav>
     </header>
     <ul class="burger-menu hidden" id="burger-menu">
@@ -46,16 +43,13 @@
         <li class="contact"><a href="index.php?page=contact">Contact</a></li>
     </ul>
 
-    <main>
-
-        <?php
-        if (file_exists($page)) {
-            include $page;
-        } else {
-            include 'pages/home.php';
-        }
-        ?>
-    </main>
+    <?php
+    if (file_exists($page)) {
+        include $page;
+    } else {
+        include 'pages/home.php';
+    }
+    ?>
 
     <footer>
         <div>
