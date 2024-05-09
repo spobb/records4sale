@@ -55,10 +55,7 @@ $statement = $pdo->query($sql);
 $results = $statement->fetchAll();
 
 ?>
-
-<div class="hero-img">
-    <h1>We sell music</h1>
-</div>
+<?php include_once 'hero.php'; ?>
 <main>
 
     <h1>Our records</h1>
