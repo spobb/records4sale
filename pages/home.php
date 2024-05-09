@@ -56,7 +56,11 @@ $results = $statement->fetchAll();
 
 ?>
 
+<div class="hero-img">
+    <h1>We sell music</h1>
+</div>
 <main>
+
     <h1>Our records</h1>
     <section class="item-catalog">
         <?php
