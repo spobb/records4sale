@@ -39,7 +39,7 @@ if (isset($_REQUEST['id'])) {
                         } else echo $res['runtime'] . ' min'; ?></li>
     </ol>
     <footer id="review">
-        <?php include 'pages/review.php' ?>
+        <?php include 'pages/review.html' ?>
 
     </footer>
 </main>

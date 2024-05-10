@@ -35,7 +35,7 @@ if (isset($_REQUEST['action'])) {
 }
 
 ?>
-<?php include_once 'hero.php'; ?>
+<?php include_once 'hero.html'; ?>
 <main>
 
     <h1>Our records</h1>
