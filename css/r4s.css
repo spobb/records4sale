@@ -14,12 +14,9 @@ main {
 	min-height: 100vh;
 	margin: 0 auto;
 }
-body > header,
-body > footer {
+body > header {
 	background-color: var(--background);
 	padding: 1rem;
-}
-body > header {
 	position: sticky;
 	top: 0;
 	border-bottom: 1px solid var(--gray);
@@ -33,10 +30,9 @@ body > header nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: no-repeat scroll center 25% / cover url("../img/hero.png");
-	width: 100vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		no-repeat scroll center 25% / cover url("../img/hero.png");
 	height: 20vh;
-	overflow: hidden;
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .hero-img h1 {
@@ -152,7 +148,7 @@ button {
 	border-radius: 5px;
 	padding: 0.3rem 1.5rem;
 	width: fit-content;
-	background: var(--accent-background);
+	background: var(--button-background);
 	cursor: pointer;
 }
 h1:not(.hero-img h1) {
@@ -170,6 +166,7 @@ h2 {
 .item-catalog {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	gap: 0.2rem;
 }
 .item-card {
@@ -200,7 +197,8 @@ h2 {
 body > footer {
 	box-shadow: 0 -4px 10px -2px rgba(0, 0, 0, 0.2);
 	border-top: 1px solid var(--gray-dark);
-	color: var(--black);
+	background-color: var(--accent-background);
+	padding: 1rem;
 }
 body > footer a {
 	color: var(--black);

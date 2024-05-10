@@ -14,10 +14,6 @@
 	margin: auto;
 	order: 0;
 }
-.item-card:hover {
-	padding: 0;
-	filter: brightness(80%);
-}
 .item-card footer {
 	flex-direction: row;
 }
