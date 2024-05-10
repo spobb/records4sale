@@ -10,15 +10,15 @@ $('#search').on('input', e => {
 })
 
 $('#search-button').click(() => {
-    let input = $('input#search').val().toLowerCase();
+    let input = $('input#search-bar').val().toLowerCase();
     if(input.length) {
         $.ajax({url:'pages/home.php',
                 data: {action: 'search', search: input},
-                type: 'POST',
-            success: (data) => {
-                $('main').html(data);
-            }}
-            
+                type: 'get',
+                success: (()=> {
+                    window.location.href = "index.php?page=home";
+                })
+            }
         );
     }
 });
