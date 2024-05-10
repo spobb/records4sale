@@ -44,6 +44,7 @@
     </ul>
 
     <?php
+    var_dump($page);
     if (file_exists($page)) {
         include $page;
     } else {

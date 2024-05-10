@@ -12,7 +12,9 @@
             $row['genre']
             ?></p>
         <footer>
-            <form action="index.php?page=item&custom=review&action=add" method="get"><button>Review</button></form>
+            <form action="index.php?page=item" method="get" name="review-form">
+                <button>Review</button>
+            </form>
             <span class="price"><?= $row['price'] . '' ?></span>
             <button>Buy</button>
         </footer>

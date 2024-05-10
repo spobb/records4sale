@@ -1,4 +1,4 @@
-<h1>Review of:</h1>
+<h2>Review of:</h2>
 <section class="wrapper">
     <div>
         <h2><?= $_REQUEST['artist']; ?></h2>
