@@ -30,6 +30,8 @@ if (isset($_REQUEST['action'])) {
                 $_REQUEST['search'],
                 $_REQUEST['search']
             );
+            $statement = $pdo->query($sql);
+            $results = $statement->fetchAll();
             break;
         case 'register':
             echo 'registered!';
@@ -48,11 +50,11 @@ if (isset($_REQUEST['action'])) {
         LEFT JOIN category c ON c.id = i.category_id 
         LEFT JOIN genre g ON g.id = i.genre_id 
         LEFT JOIN artist a ON a.id = i.artist_id"
-    );
-}
 
-$statement = $pdo->query($sql);
-$results = $statement->fetchAll();
+    );
+    $statement = $pdo->query($sql);
+    $results = $statement->fetchAll();
+}
 
 ?>
 <?php include_once 'hero.php'; ?>
