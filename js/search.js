@@ -1,5 +1,5 @@
 $('#search').on('input', e => {
-    let input = $('input#search').val().toLowerCase();
+    let input = $('#search').val().toLowerCase();
     const itms = $('.item-card').toArray();    
     itms.forEach(itm => {
         let titles = itm.childNodes[1].childNodes[3].innerText.toLowerCase();
@@ -9,8 +9,8 @@ $('#search').on('input', e => {
     });
 })
 
-$('#search-button').click(() => {
-    let input = $('input#search-bar').val().toLowerCase();
+$('#search-button').on('click', () => {
+    let input = $('#search').val().toLowerCase();
     if(input.length) {
         $.ajax({url:'pages/home.php',
                 data: {action: 'search', search: input},
