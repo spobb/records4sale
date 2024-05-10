@@ -12,6 +12,9 @@ if (isset($_GET['page'])) {
         case 'item':
             $page = 'pages/item.php';
             break;
+        case 'search':
+            $page = 'pages/search.php';
+            break;
         default:
             $page = 'pages/' . $_GET['page'] . '.html';
             break;
