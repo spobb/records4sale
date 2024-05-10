@@ -23,17 +23,21 @@ if (isset($_REQUEST['id'])) {
     <span><?= $res['genre'] ?></span>
     <span><?= $res['release'] ?></span>
     <img src="<?= album_cover($res) ?> " alt="album cover">
-    <div class="tracklist">
-        <span>song01</span>
-        <span>song02</span>
-        <span>song03</span>
-        <span>song04</span>
-        <span>song05</span>
-        <span>song06</span>
-        <span>song07</span>
-        <span>song08</span>
-        <span><?= $res['runtime'] ?></span>
-    </div>
+    <ol class="tracklist">
+        <li>song 01</li>
+        <li>song 02</li>
+        <li>song 03</li>
+        <li>song 04</li>
+        <li>song 05</li>
+        <li>song 06</li>
+        <li>song 07</li>
+        <li>song 08</li>
+        <li>runtime: <?php if ($res['runtime'] > 60) {
+                            $h = floor($res['runtime'] / 60);
+                            $m = $res['runtime'] % 60;
+                            printf("%d hr %02d min", $h, $m);
+                        } else echo $res['runtime'] . ' min'; ?></li>
+    </ol>
     <footer id="review">
         <?php include 'pages/review.php' ?>
 

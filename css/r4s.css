@@ -1,5 +1,5 @@
-@import url("normalize.css");
-@import url("colors.css");
+@import url('normalize.css');
+@import url('colors.css');
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -39,7 +39,7 @@ body > header nav {
 }
 .hero-img {
 	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		no-repeat scroll center 25% / cover url("../img/hero.png");
+		no-repeat scroll center 25% / cover url('../img/hero.png');
 	height: 20vh;
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -91,7 +91,7 @@ a {
 	padding: 1rem;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-input[type="search"] {
+input[type='search'] {
 	appearance: none;
 	padding: 0;
 	border: 0;
@@ -100,7 +100,7 @@ input[type="search"] {
 	border-bottom: 2px solid var(--gray);
 	background: none;
 }
-input[type="search"]:focus {
+input[type='search']:focus {
 	outline: none;
 }
 .review-stars {
@@ -118,7 +118,14 @@ input[type="search"]:focus {
 	mask: no-repeat center/95% url(../img/svg/star.svg);
 	background: #ffa534;
 }
-
+.tracklist {
+	background: var(--accent-background);
+	border: 1px solid var(--gray);
+}
+.tracklist * {
+	padding: 1rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
 #burger-button {
 	margin: auto 0 auto auto;
 }
@@ -201,7 +208,7 @@ h2 {
 }
 .price::after {
 	/* unicode for euro symbol */
-	content: "\20AC";
+	content: '\20AC';
 }
 body > footer {
 	box-shadow: 0 -4px 10px -2px rgba(0, 0, 0, 0.2);
