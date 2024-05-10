@@ -21,10 +21,10 @@
             ?>">
     <header>
         <nav>
-            <div class="home-buttons">
+            <div class="home-buttons flex-center">
                 <a href="index.php?page=home" class="home"><img src="img/text-logo.png" alt="logo image"></a>
             </div>
-            <div class="search-bar search">
+            <div class="search-bar flex-center">
                 <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
             </div>
             <ul class="nav-buttons">
@@ -44,7 +44,6 @@
     </ul>
 
     <?php
-    var_dump($page);
     if (file_exists($page)) {
         include $page;
     } else {
@@ -92,7 +91,6 @@
 
     <script src="js/search.js"></script>
     <script src="js/burger.js"></script>
-    <script src="js/review.js"></script>
 </body>
 
 </html>

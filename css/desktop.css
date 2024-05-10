@@ -1,9 +1,26 @@
+.home-buttons {
+	grid-column: 1;
+	justify-content: flex-start;
+}
 .nav-buttons {
 	display: flex;
 }
 .burger-menu,
 #burger-button {
 	display: none;
+}
+.search-bar {
+	display: flex;
+}
+#search-button {
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	background: none;
+}
+body > header nav {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
 }
 .item-catalog {
 	grid-template-columns: repeat(4, 1fr);
@@ -16,5 +33,6 @@ body > footer {
 	height: 50vh;
 }
 .item-card:hover {
-	padding: 0;
+	padding: 0.2rem;
+	filter: brightness(80%);
 }
