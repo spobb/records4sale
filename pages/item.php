@@ -18,26 +18,28 @@ if (isset($_REQUEST['id'])) {
 ?>
 
 <main>
-    <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist"><?= $res['artist'] ?></a>
-    <a href="index.php?page=item&id=<?= $res['id'] ?>" class="title"><?= $res['label'] ?></a>
-    <span><?= $res['genre'] ?></span>
-    <span><?= $res['release'] ?></span>
+    <div>
+        <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist"><?= $res['artist'] ?></a>
+        <a href="index.php?page=item&id=<?= $res['id'] ?>" class="title"><?= $res['label'] ?></a>
+        <span><?= $res['genre'] ?></span>
+        <span><?= $res['release'] ?></span>
+        <ol class="tracklist">
+            <li>song 01</li>
+            <li>song 02</li>
+            <li>song 03</li>
+            <li>song 04</li>
+            <li>song 05</li>
+            <li>song 06</li>
+            <li>song 07</li>
+            <li>song 08</li>
+            <li>runtime: <?php if ($res['runtime'] > 60) {
+                                $h = floor($res['runtime'] / 60);
+                                $m = $res['runtime'] % 60;
+                                printf("%d hr %02d min", $h, $m);
+                            } else echo $res['runtime'] . ' min'; ?></li>
+        </ol>
+    </div>
     <img src="<?= album_cover($res) ?> " alt="album cover">
-    <ol class="tracklist">
-        <li>song 01</li>
-        <li>song 02</li>
-        <li>song 03</li>
-        <li>song 04</li>
-        <li>song 05</li>
-        <li>song 06</li>
-        <li>song 07</li>
-        <li>song 08</li>
-        <li>runtime: <?php if ($res['runtime'] > 60) {
-                            $h = floor($res['runtime'] / 60);
-                            $m = $res['runtime'] % 60;
-                            printf("%d hr %02d min", $h, $m);
-                        } else echo $res['runtime'] . ' min'; ?></li>
-    </ol>
     <footer id="review">
         <?php include 'pages/review.html' ?>
 
