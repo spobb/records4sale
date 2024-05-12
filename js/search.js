@@ -1,6 +1,11 @@
 $('#search').on('input', e => {
-    let input = $('#search').val().toLowerCase();
-    const itms = $('.item-card').toArray();    
+    let input = $('#search')
+    .val()
+    .toLowerCase()
+    .replace('/[-,;:!\'\"\\]/', '');
+
+    const itms = $('.item-card').toArray(); 
+
     itms.forEach(itm => {
         let titles = itm.childNodes[1].childNodes[3].innerText.toLowerCase();
         let artists = itm.childNodes[1].childNodes[1].innerText.toLowerCase();
