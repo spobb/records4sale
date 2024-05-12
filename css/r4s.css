@@ -87,9 +87,10 @@ input[type='search'] {
 	padding: 0;
 	border: 0;
 	border-radius: 0;
-	padding-bottom: 0.5rem;
-	border-bottom: 2px solid var(--white);
 	background: none;
+	border-bottom: 2px solid var(--white);
+	padding-bottom: 0.5rem;
+	color: var(--white);
 }
 input[type='search']:focus {
 	outline: none;
@@ -97,6 +98,16 @@ input[type='search']:focus {
 #profile main {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+}
+.profile-reviews {
+	gap: 0.5rem;
+}
+.profile-review {
+	background-color: var(--accent-background);
+	border-radius: 5px;
+	width: 30%;
+	height: 10rem;
+	padding: 0.5rem;
 }
 #item main {
 	display: grid;
@@ -130,23 +141,28 @@ input[type='search']:focus {
 .review-stars {
 	max-width: fit-content;
 	text-wrap: nowrap;
+	padding: 0.2rem 0;
 }
 .stars {
 	height: auto;
 	appearance: none;
 	border: none;
 	mask: no-repeat center/95% url(../img/svg/star.svg);
-	background: #bbb;
+	background: var(--accent-background);
 }
 .stars-checked {
 	mask: no-repeat center/95% url(../img/svg/star.svg);
-	background: #ffa534;
+	background: var(--stars-checked);
 }
 #burger-button {
 	margin: auto 0 auto auto;
 }
 form div {
 	text-align: center;
+}
+.required::after {
+	content: ' *';
+	color: #f55;
 }
 form button {
 	margin-top: 0.2rem;
@@ -223,7 +239,6 @@ h2 {
 	margin-left: auto;
 }
 .price::after {
-	/* unicode for euro symbol */
 	content: '\20AC';
 }
 body > footer {
