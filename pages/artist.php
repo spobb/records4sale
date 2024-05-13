@@ -16,32 +16,13 @@ if (isset($_REQUEST['id'])) {
 ?>
 
 <main>
-    <img src="<?= album_cover($res) ?> " alt="album cover">
-    <div>
-        <div class="wrapper item-info">
-            <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist"><?= $res['artist'] ?></a>
-            <a href="index.php?page=item&id=<?= $res['id'] ?>" class="title"><?= $res['label'] ?></a>
-            <span><?= $res['genre'] ?></span>
-            <span><?= $res['release'] ?></span>
-        </div>
-        <ol class="tracklist">
-            <li>song 01</li>
-            <li>song 02</li>
-            <li>song 03</li>
-            <li>song 04</li>
-            <li>song 05</li>
-            <li>song 06</li>
-            <li>song 07</li>
-            <li>song 08</li>
-            <li>runtime: <?php if ($res['runtime'] > 60) {
-                                $h = floor($res['runtime'] / 60);
-                                $m = $res['runtime'] % 60;
-                                printf("%d hr %02d min", $h, $m);
-                            } else echo $res['runtime'] . ' min'; ?></li>
-        </ol>
-    </div>
-    <footer id="review">
-        <?php include 'pages/review.html' ?>
-
-    </footer>
+    <h1><?= $res['artist'] ?></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, amet vitae porro quae debitis aperiam modi autem itaque totam, nulla recusandae rerum expedita vero eveniet ad,
+        obcaecati ullam vel nam deserunt hic exercitationem sapiente iusto velit accusantium! Fuga expedita voluptatem corrupti maxime mollitia quibusdam quos nisi, enim, et distinctio,
+        rem culpa. Ut, maiores nihil, atque, facere eius at optio sit debitis exercitationem ex doloremque error culpa magni enim quam ab reiciendis eum in iste rerum consequuntur odio
+        vel sint commodi. Tempora est temporibus distinctio sint excepturi quae sequi quasi quia laboriosam, nam et facere vel. Temporibus atque cupiditate maxime quod.
+    </p>
+    <ul>
+        <li><?= $res['label'] ?></li>
+    </ul>
 </main>
