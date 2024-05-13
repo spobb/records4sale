@@ -18,21 +18,27 @@
 	cursor: pointer;
 	background: none;
 }
+main {
+	max-width: 1280px;
+}
 body > header nav {
 	display: grid;
 	grid-template-columns: 2fr 1fr 2fr;
 }
 .item-catalog {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+			0,
+			1fr
+		);
 }
 body > footer {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 1fr 1fr;
 }
 .hero-img {
 	height: 50vh;
 }
-.item-card:hover {
+.item-card img:hover {
 	padding: 0.2rem;
 	filter: brightness(80%);
 }

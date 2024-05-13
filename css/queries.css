@@ -1,6 +1,11 @@
+#item main {
+	max-width: 1024px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
 .item-catalog {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .item-card {
 	flex-direction: column;
@@ -27,12 +32,19 @@
 .item-card a {
 	order: 0;
 }
+.item-info {
+	margin-left: 0;
+}
+.title {
+	width: auto;
+	max-width: 100%;
+}
 .home {
 	max-width: 420px;
 	height: auto;
 }
 @media (min-width: 768px) {
 	.item-catalog {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 	}
 }
