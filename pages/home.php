@@ -20,6 +20,15 @@ if (isset($_REQUEST['action'])) {
             break;
         default:
             echo sprintf('%s is not a valid action', $_REQUEST['action']);
+            $sql = sprintf(
+                "SELECT i.id, i.label, i.price, i.runtime, c.label as category, g.label as genre, a.label as artist, i.artist_id 
+                FROM item i
+                LEFT JOIN category c ON c.id = i.category_id 
+                LEFT JOIN genre g ON g.id = i.genre_id 
+                LEFT JOIN artist a ON a.id = i.artist_id"
+            );
+            $statement = $pdo->query($sql);
+            $results = $statement->fetchAll();
             break;
     }
 } else {
