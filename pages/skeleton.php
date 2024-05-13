@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/queries.css" media="(min-width:576px)">
     <link rel="stylesheet" href="css/desktop.css" media="(min-width:1024px)">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
