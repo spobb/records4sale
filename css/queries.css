@@ -1,6 +1,7 @@
-#item main {
-	max-width: 1024px;
+.item-page {
+	max-width: 65%;
 	display: grid;
+	margin: auto;
 	grid-template-columns: 1fr 2fr;
 }
 .item-catalog {
@@ -35,7 +36,7 @@
 .item-info {
 	margin-left: 0;
 }
-.title {
+.overflow {
 	width: auto;
 	max-width: 100%;
 }

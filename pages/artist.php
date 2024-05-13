@@ -16,7 +16,7 @@ if (isset($_REQUEST['id'])) {
 ?>
 
 <main>
-    <h1><?= $res[0]['artist'] ?></h1>
+    <h1 class="overflow"><?= $res[0]['artist'] ?></h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, amet vitae porro quae debitis aperiam modi autem itaque totam, nulla recusandae rerum expedita vero eveniet ad,
         obcaecati ullam vel nam deserunt hic exercitationem sapiente iusto velit accusantium! Fuga expedita voluptatem corrupti maxime mollitia quibusdam quos nisi, enim, et distinctio,
         rem culpa. Ut, maiores nihil, atque, facere eius at optio sit debitis exercitationem ex doloremque error culpa magni enim quam ab reiciendis eum in iste rerum consequuntur odio

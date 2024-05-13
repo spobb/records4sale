@@ -1,15 +1,12 @@
 :root {
 	--white: #fefefe;
 
-	--main-background: #eee;
-	--accent-background: #cdcdcd;
-	--background: #111;
-	--button-background: #eee;
+	--main-bg: #eee;
+	--header-bg: #111;
+	--accent-bg: #cdcdcd;
+	--accent: #26c;
+	--button-bg: #eee;
 	--button-bg-hover: #ccc;
 	--stars-checked: #ffa534;
-	--gray: #797979;
-	--gray-dark: #707070;
-	--gray-darkest: #454545;
-
-	--black: #222;
+	--black: #111;
 }
