@@ -21,6 +21,7 @@ body {
 }
 main {
 	max-width: 1280px;
+	width: 95vw;
 	min-height: 100vh;
 	margin: 0 auto;
 }
@@ -216,11 +217,12 @@ h2 {
 }
 .title {
 	color: var(--black);
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 .overflow {
 	display: block;
-	width: 40vw;
+	width: 100%;
+	max-width: 80%;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -233,14 +235,20 @@ h2 {
 	color: var(--accent-hover);
 }
 .item-card {
-	display: flex;
+	display: grid;
 	width: 100%;
+	grid-template-columns: 1fr 4fr 1fr;
+}
+.item-names {
+	align-items: flex-start;
+	grid-column: span 2;
 }
 .item-card div + a {
 	order: -1;
 	width: 8rem;
 }
 .item-info {
+	grid-column: span 2;
 	margin-left: auto;
 	padding: 0.5rem;
 }
@@ -249,6 +257,7 @@ h2 {
 }
 .item-card a {
 	order: 1;
+	grid-row: span 2;
 }
 .item-card footer {
 	display: flex;

@@ -1,5 +1,5 @@
 <article class="item-card">
-    <div>
+    <div class="item-names">
         <a href="index.php?page=artist&id=<?= $row['artist_id'] ?>" class="artist overflow"><?= $row['artist'] ?></a>
         <a href="index.php?page=item&id=<?= $row['id'] ?>" class="title overflow"><?= $row['label'] ?></a>
     </div>

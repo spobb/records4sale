@@ -1,3 +1,6 @@
+.item-page {
+	max-width: 90%;
+}
 .home-buttons {
 	grid-column: 1;
 	justify-content: flex-start;

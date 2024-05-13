@@ -1,14 +1,17 @@
 .item-page {
-	max-width: 65%;
 	display: grid;
 	margin: auto;
 	grid-template-columns: 1fr 2fr;
+}
+.item-page .artist {
+	max-width: 10rem;
 }
 .item-catalog {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .item-card {
+	display: flex;
 	flex-direction: column;
 	margin-bottom: 2rem;
 	width: auto;
