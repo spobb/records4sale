@@ -281,9 +281,16 @@ body > footer {
 	background-color: var(--header-bg);
 	padding: 1rem;
 }
-body > footer *:last-child {
+.footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.footer > *:last-child {
 	grid-column: span 3;
 	text-align: center;
+}
+.map {
+	grid-column: span 3;
 }
 img:not(.svg) {
 	max-width: 100%;

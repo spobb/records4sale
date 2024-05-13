@@ -41,6 +41,7 @@
         <li class="login"><a href="index.php?page=login">Sign in</a></li>
         <li class="register"><a href="index.php?page=register">Sign up</a></li>
         <li class="contact"><a href="index.php?page=contact">Contact</a></li>
+        <li class="about"><a href="index.php?page=about">About us</a></li>
     </ul>
 
     <?php
@@ -52,40 +53,37 @@
     ?>
 
     <footer>
-        <div>
-            <!-- contact info -->
-            <address>
-                guillaume <br>
-                0476 68 29 54 <br>
-                gverlaeken@student.efp.be
-            </address>
-
-            <!-- socials -->
-            <nav>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </nav>
-        </div>
-
-        <div>
-            <ul>
-                <li><a href="#">link 1</a></li>
-                <li><a href="#">link 2</a></li>
-                <li><a href="#">link 3</a></li>
-            </ul>
-
-            <!-- partners/links -->
-        </div>
-
-        <div>
-            <!-- map -->
-            <img src="img/map.png" alt="map of EFP">
-        </div>
-
-        <div>
-            <!-- copyright -->
-            &copy; <?= date('Y') ?>
+        <div class="footer">
+            <div>
+                <!-- contact info -->
+                <!-- socials -->
+                <nav>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </nav>
+                <p>Contact me:</p>
+                <address>
+                    guillaume <br>
+                    gverlaeken@student.efp.be
+                </address>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.php?page=about">About us</a></li>
+                    <li><a href="#">Legal stuff</a></li>
+                    <li><a href="#">Lorem, ipsum</a></li>
+                </ul>
+                <!-- partners/links -->
+            </div>
+            <div class="map">
+                <!-- map -->
+                <img src="img/map.png" alt="map of EFP">
+            </div>
+            <div>
+                <!-- copyright -->
+                &copy; <?= date('Y') ?> Guillaume V.
+            </div>
         </div>
     </footer>
 

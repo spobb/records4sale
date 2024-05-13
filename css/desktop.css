@@ -32,9 +32,21 @@ body > header nav {
 	justify-content: center;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-body > footer {
+.footer {
+	margin: 0 auto;
+	max-width: 1280px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+}
+.footer > * {
+	align-items: flex-start;
+}
+.footer > *:last-child {
+	grid-column: span 3;
+	text-align: center;
+}
+.map {
+	grid-column: span 1;
 }
 .hero-img {
 	height: 50vh;
