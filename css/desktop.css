@@ -26,10 +26,8 @@ body > header nav {
 	grid-template-columns: 2fr 1fr 2fr;
 }
 .item-catalog {
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
-			0,
-			1fr
-		);
+	justify-content: center;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 body > footer {
 	display: grid;
