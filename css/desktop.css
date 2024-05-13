@@ -15,11 +15,11 @@
 .search-bar {
 	display: flex;
 }
-#search-button {
-	border: 0;
-	padding: 0;
-	cursor: pointer;
-	background: none;
+.search-bar {
+	order: 0;
+}
+.search-bar > input {
+	display: initial;
 }
 main {
 	max-width: 1280px;
@@ -27,6 +27,12 @@ main {
 body > header nav {
 	display: grid;
 	grid-template-columns: 2fr 1fr 2fr;
+}
+.profile-page {
+	grid-template-columns: 1fr 3fr;
+}
+.sidebar {
+	min-width: 0;
 }
 .item-catalog {
 	justify-content: center;
@@ -54,4 +60,10 @@ body > header nav {
 .item-card img:hover {
 	padding: 0.2rem;
 	filter: brightness(80%);
+}
+
+@media (min-width: 1280px) {
+	.profile-page {
+		margin-left: auto;
+	}
 }

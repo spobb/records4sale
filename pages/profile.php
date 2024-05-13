@@ -10,7 +10,7 @@ foreach ($reviews as $row) {
     ++$c;
 }
 ?>
-<main>
+<main class="profile-page">
     <nav class="sidebar">
         <a href="#profile-information">Your profile</a>
         <a href="#profile-favorites">Your favorites</a>
@@ -29,7 +29,7 @@ foreach ($reviews as $row) {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rem architecto consequuntur veritatis ullam hic eveniet voluptates dolores corrupti dolorem! Ea vel, esse quasi alias veniam vitae inventore! Pariatur, possimus.</p>
         <h2>Lorem, ipsum dolor.</h2>
         <h2 id="profile-reviews">Your reviews</h2>
-        <div class="flex-center profile-reviews">
+        <div class="profile-reviews">
             <?php foreach ($reviews as $row) {
                 include 'partials/profile-review.php';
             } ?>

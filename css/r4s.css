@@ -64,7 +64,16 @@ body > header nav {
 	grid-column: 2;
 }
 .search-bar {
+	order: -1;
+}
+.search-bar > input {
 	display: none;
+}
+#search-button {
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	background: none;
 }
 .nav-buttons {
 	display: none;
@@ -88,6 +97,9 @@ a {
 	color: var(--white);
 	text-decoration: none;
 }
+#burger-button {
+	margin: auto 0 auto auto;
+}
 input[type='search'] {
 	appearance: none;
 	padding: 0;
@@ -107,32 +119,29 @@ input[type='search']:focus {
 	justify-content: center;
 	padding: 2rem;
 }
-#item footer {
+.item-page footer {
 	grid-column: span 2;
-}
-#profile main {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-}
-.profile-reviews {
-	gap: 0.5rem;
 }
 .profile-review {
 	background-color: var(--accent-bg);
 	border-radius: 5px;
 	width: 30%;
-	height: 10rem;
 	padding: 0.5rem;
 }
-.sidebar {
+.profile-reviews {
 	display: flex;
-	flex-direction: column;
-	background-color: var(--accent-bg);
-	height: 100%;
+	justify-content: center;
+	gap: 0.5rem;
 }
-.sidebar > * {
-	padding: 1rem;
-	border-bottom: 1px solid var(--transp);
+.profile-page {
+	display: flex;
+}
+.profile-page > div {
+	max-width: 100%;
+}
+.sidebar {
+	display: none;
+	min-width: 25vw;
 }
 .tracklist {
 	background: var(--accent-bg);
@@ -163,9 +172,6 @@ input[type='search']:focus {
 	mask: no-repeat center/95% url(../img/svg/star.svg);
 	background: var(--stars-checked);
 }
-#burger-button {
-	margin: auto 0 auto auto;
-}
 form div {
 	text-align: center;
 }
@@ -194,6 +200,7 @@ input[type='submit'] {
 	background: none;
 	border: none;
 	border-radius: 5px;
+	text-wrap: nowrap;
 	padding: 0.3rem 1.5rem;
 	width: fit-content;
 	background: var(--button-bg);
@@ -213,6 +220,7 @@ a,
 p,
 h2 {
 	padding: 0.2rem 0.5rem;
+	text-wrap: break-word;
 }
 .item-catalog {
 	margin: 0 auto;
@@ -299,8 +307,8 @@ img:not(.svg) {
 	min-height: auto;
 }
 .svg {
-	width: 2rem;
-	height: 2rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 #login .login,
 #register .register {

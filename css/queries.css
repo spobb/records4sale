@@ -39,10 +39,28 @@
 .item-info {
 	margin-left: 0;
 }
+.profile-page {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 4fr);
+	margin-left: 0;
+}
+.sidebar {
+	position: sticky;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--accent-bg);
+	height: 100%;
+}
+.sidebar > * {
+	padding: 1rem;
+	border-bottom: 1px solid var(--transp);
+}
 .overflow {
 	max-width: 100%;
 }
 .home {
+	width: 80%;
 	max-width: 420px;
 	height: auto;
 }
