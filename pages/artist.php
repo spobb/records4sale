@@ -4,12 +4,10 @@ include 'include.php';
 
 if (isset($_REQUEST['id'])) {
     $sql = sprintf(
-        "SELECT i.id, i.label, i.price, i.artist_id, i.runtime, i.release, c.label as category, g.label as genre, a.label as artist 
+        "SELECT i.id, i.label, i.price, i.artist_id, a.label as artist 
         FROM item i 
-        LEFT JOIN category c ON c.id = i.category_id 
-        LEFT JOIN genre g ON g.id = i.genre_id 
         LEFT JOIN artist a ON a.id = i.artist_id
-        WHERE i.id = %d",
+        WHERE a.id = %d",
         $_REQUEST['id']
     );
     $statement = $pdo->query($sql);
@@ -43,7 +41,7 @@ if (isset($_REQUEST['id'])) {
         </ol>
     </div>
     <footer id="review">
-        <?php include 'partials/review.html' ?>
+        <?php include 'pages/review.html' ?>
 
     </footer>
 </main>

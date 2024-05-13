@@ -27,7 +27,7 @@ foreach ($reviews as $row) {
         <h2 id="profile-reviews">Your reviews</h2>
         <div class="flex-center profile-reviews">
             <?php foreach ($reviews as $row) {
-                include 'profile-review.php';
+                include 'partials/profile-review.php';
             } ?>
         </div>
         <h2 id="profile-favorites">Security</h2>
