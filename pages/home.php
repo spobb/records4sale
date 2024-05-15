@@ -48,7 +48,7 @@ if (isset($_REQUEST['action'])) {
 <main>
 
     <h1>Our records</h1>
-    <section class="item-catalog wrapper">
+    <section class="item-catalog column-wrapper">
         <?php
         foreach ($results as $row) {
             if ($row['label'])

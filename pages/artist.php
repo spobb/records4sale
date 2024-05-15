@@ -23,7 +23,7 @@ if (isset($_REQUEST['id'])) {
         vel sint commodi. Tempora est temporibus distinctio sint excepturi quae sequi quasi quia laboriosam, nam et facere vel. Temporibus atque cupiditate maxime quod.
     </p>
     <h1>records</h1>
-    <section class="item-catalog wrapper">
+    <section class="item-catalog column-wrapper">
         <?php
         foreach ($res as $row) {
             if ($row['label'])

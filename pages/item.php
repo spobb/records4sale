@@ -26,7 +26,7 @@ if (isset($_REQUEST['id'])) {
                             $img = 'https://picsum.photos/seed/' . $res['label'] . '/300/300';
                         }
                         echo $img; ?>" alt="album cover">
-            <div class="wrapper item-info">
+            <div class="column-wrapper item-info">
                 <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist overflow"><?= $res['artist'] ?></a>
                 <span><?= $res['genre'] ?></span>
                 <span><?= $res['release'] ?></span>

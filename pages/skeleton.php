@@ -21,10 +21,10 @@
             ?>">
     <header>
         <nav>
-            <div class="home-buttons flex-center">
+            <div class="home-buttons wrapper">
                 <a href="index.php?page=home" class="home"><img src="img/text-logo.png" alt="logo image"></a>
             </div>
-            <div class="search-bar flex-center">
+            <div class="search-bar wrapper">
                 <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
             </div>
             <ul class="nav-buttons">

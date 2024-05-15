@@ -1,5 +1,5 @@
 <main>
-    <div class="form wrapper">
+    <div class="form column-wrapper">
         <h1>Contact us</h1>
         <form action="" method="POST">
             <label for="fname" class="required">First name</label>

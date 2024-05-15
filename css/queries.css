@@ -39,6 +39,9 @@
 .item-info {
 	margin-left: 0;
 }
+.form > * {
+	width: auto;
+}
 .overflow {
 	max-width: 100%;
 }

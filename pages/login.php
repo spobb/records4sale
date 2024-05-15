@@ -1,5 +1,5 @@
 <main>
-    <div class="form wrapper">
+    <div class="form column-wrapper">
         <form action="index.php?action=identify" method="POST">
             <label for="user" class="required">Username</label>
             <input type="text" name="username" placeholder="Username" id="user" required>
