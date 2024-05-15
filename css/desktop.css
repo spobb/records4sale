@@ -60,9 +60,13 @@ body > header nav {
 	margin-bottom: 2rem;
 }
 .profile-nav input {
-	appearance: none;
-	border: none;
+	/* appearance: none; */
+	/* border: none; */
 	width: 1rem;
+}
+.profile-nav input:checked + label {
+	border-bottom: 3px solid var(--accent);
+	margin-bottom: -3px;
 }
 .profile-contact {
 	gap: 5rem;
