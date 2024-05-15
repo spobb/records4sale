@@ -9,8 +9,7 @@
             <h2>Title</h2>
             <span>Rating</span>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
-                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum qui!
-                Aut necessitatibus, saepe voluptatum quam odio ex, nisi, aliquid soluta quidem dolore beatae vero neque ipsam aspernatur facere? Hic!</p>
+                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
         </div>
         <div class="review column-wrapper">
             <h2>Title</h2>
@@ -26,5 +25,25 @@
         <span>Add a review</span>
     </div>
 
-    <h1>Personal information</h1>
+    <nav class="profile-nav wrapper">
+        <label for="profile-about">About</label>
+        <input type="radio" name="nav" id="profile-about">
+        <label for="profile-contact">Contact</label>
+        <input type="radio" name="nav" id="profile-contact">
+        <label for="profile-Safety">Safety</label>
+        <input type="radio" name="nav" id="profile-safety">
+
+    </nav>
+    <div class="profile-contact wrapper">
+        <div class="address column-wrapper">
+            <span>Phone</span>
+            <span>E-mail</span>
+            <span>Address</span>
+        </div>
+        <div class="column-wrapper">
+            <span>+32 485 58 45 75</span>
+            <span>gverlaeken@student.efp.be</span>
+            <span>Rue de Stalle, 292B 1180 Bruxelles</span>
+        </div>
+    </div>
 </main>

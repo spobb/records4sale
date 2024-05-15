@@ -47,7 +47,35 @@ body > header nav {
 	gap: 1rem;
 }
 .review {
-	height: 100%;
+	height: 20rem;
+	border: 1px solid var(--black);
+	padding: 1rem;
+}
+.profile-nav {
+	justify-content: space-around;
+	max-width: fit-content;
+	gap: 1.5rem;
+	padding-left: 1rem;
+	border-bottom: 2px solid var(--transp);
+	margin-bottom: 2rem;
+}
+.profile-nav input {
+	appearance: none;
+	border: none;
+	width: 1rem;
+}
+.profile-contact {
+	gap: 5rem;
+	justify-content: start;
+}
+.profile-contact * {
+	width: 80%;
+	gap: 2rem;
+	text-align: start;
+}
+.address {
+	width: 5rem;
+	color: var(--extra);
 }
 .footer {
 	margin: 0 auto;
