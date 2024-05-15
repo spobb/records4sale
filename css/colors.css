@@ -1,17 +1,18 @@
 :root {
-	--white: #fefefe;
-	--black: #111;
+	--white: #fff;
+	--black: #000;
 
-	--main-bg: #e9e9e9;
+	--main-bg: #fff;
 	--header-bg: #111;
 	--accent-bg: #cdcdcd;
 	--menu-bg: #444;
+	--outside-bg: #222;
 
-	--accent: #5f9fff;
-	--accent-hover: #4060c0;
+	--accent: #b258db;
+	--accent-hover: #8f43b3;
 
 	--button-bg: #fff;
-	--button-bg-hover: #ccc;
+	--button-bg-hover: #b258db;
 
 	--stars-checked: #ffa534;
 
