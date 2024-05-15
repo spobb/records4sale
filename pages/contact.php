@@ -1,6 +1,6 @@
 <main>
-    <h1>Contact us</h1>
-    <div class="wrapper">
+    <div class="form wrapper">
+        <h1>Contact us</h1>
         <form action="" method="POST">
             <label for="fname" class="required">First name</label>
             <input type="text" name="firstname" id="fname" required>
