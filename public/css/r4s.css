@@ -299,6 +299,24 @@ h2 {
 	flex-direction: column;
 	gap: 0.5rem;
 }
+.profile-nav {
+	justify-content: space-around;
+	max-width: fit-content;
+	gap: 4rem;
+	border-bottom: 2px solid var(--transp);
+	margin-bottom: 2rem;
+}
+.profile-nav input {
+	display: none;
+}
+.profile-nav label {
+	text-align: center;
+	width: 5rem;
+}
+.profile-nav label:has(input:checked) {
+	border-bottom: 3px solid var(--accent);
+	margin-bottom: -3px;
+}
 .price + button {
 	margin-left: auto;
 }
@@ -324,7 +342,7 @@ body > footer {
 }
 img:not(.svg) {
 	width: 100%;
-	max-height: auto;
+	height: auto;
 	min-width: 5rem;
 }
 .svg {

@@ -51,23 +51,6 @@ body > header nav {
 	border: 1px solid var(--black);
 	padding: 1rem;
 }
-.profile-nav {
-	justify-content: space-around;
-	max-width: fit-content;
-	gap: 1.5rem;
-	padding-left: 1rem;
-	border-bottom: 2px solid var(--transp);
-	margin-bottom: 2rem;
-}
-.profile-nav input {
-	/* appearance: none; */
-	/* border: none; */
-	width: 1rem;
-}
-.profile-nav input:checked + label {
-	border-bottom: 3px solid var(--accent);
-	margin-bottom: -3px;
-}
 .profile-contact {
 	gap: 5rem;
 	justify-content: start;
