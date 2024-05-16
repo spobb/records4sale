@@ -35,10 +35,9 @@ function album_cover($res)
 
 function create_folders($res)
 {
-    $dir = "public/images/covers/" . $res['artist'] . "/" . $res['label'];
-    rename("public/images/covers/" . "/" . $res['artist'] . "/" . $res['label'], format_string($res['label']));
-    rename("public/images/covers/" . $res['artist'], format_string($res['artist']));
+    $dir = "public/images/covers/" . format_string($res['artist']) . "/" . format_string($res['label']);
 
-    // if (!file_exists($dir))
-    // mkdir($dir, 0777, true);
+    if (!file_exists($dir)) {
+        mkdir($dir, 0777, true);
+    }
 }
