@@ -1,6 +1,4 @@
 <?php
-include 'include.php';
-
 if (isset($_REQUEST['id'])) {
     $sql = sprintf(
         "SELECT i.id, i.label, i.artist_id, a.label as artist 
