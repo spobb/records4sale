@@ -1,5 +1,5 @@
 <?php
-include 'include.php';
+require 'include.php';
 
 if (isset($_REQUEST['id'])) {
     $sql = sprintf(
@@ -47,7 +47,7 @@ if (isset($_REQUEST['id'])) {
                             } else echo $res['runtime'] . ' min'; ?></li>
         </ol>
         <footer id="review">
-            <?php include 'pages/partials/review.html' ?>
+            <?php require 'pages/partials/review.php' ?>
         </footer>
     </div>
 </main>

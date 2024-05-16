@@ -41,9 +41,8 @@ if (isset($_REQUEST['action'])) {
     $statement = $pdo->query($sql);
     $results = $statement->fetchAll();
 }
-
 ?>
-<?php include_once 'partials/hero.html'; ?>
+<?php require_once 'partials/hero.php'; ?>
 <main>
 
     <h1>Our records</h1>
@@ -51,7 +50,7 @@ if (isset($_REQUEST['action'])) {
         <?php
         foreach ($results as $row) {
             if ($row['label'])
-                include 'partials/item-card.php';
+                require 'partials/item-card.php';
         }
         ?>
     </section>
