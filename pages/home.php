@@ -1,6 +1,4 @@
 <?php
-require 'include.php';
-
 if (isset($_REQUEST['action'])) {
     switch ($_REQUEST['action']) {
         case 'search':
@@ -49,8 +47,9 @@ if (isset($_REQUEST['action'])) {
     <section class="item-catalog column-wrapper">
         <?php
         foreach ($results as $row) {
-            if ($row['label'])
+            if ($row['label']) {
                 require 'partials/item-card.php';
+            }
         }
         ?>
     </section>

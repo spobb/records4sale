@@ -141,7 +141,6 @@ input[type='search']:focus {
 	padding: 2rem;
 }
 .item-image {
-	max-width: 80%;
 	min-width: 216px;
 	margin: 0 auto;
 }
@@ -305,7 +304,7 @@ h1 {
 	justify-content: space-around;
 	max-width: fit-content;
 	gap: 4rem;
-	border-bottom: 2px solid var(--transp);
+	border-bottom: 1px solid var(--transp);
 	margin-bottom: 2rem;
 }
 .profile-nav input {

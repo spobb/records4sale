@@ -11,7 +11,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <link rel="shortcut icon" href="public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body id="<?php

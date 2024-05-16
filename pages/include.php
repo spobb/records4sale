@@ -2,10 +2,43 @@
 
 // fetches the album cover image based on title and artist name in database
 
-function album_cover($result)
+// $images = [];
+// $dir = 'public/images/covers';
+// $directories = scandir($dir);
+// foreach ($directories as $directory) {
+//     if ($directory == '.' or $directory == '..') {
+//         continue;
+//     }
+//     $files = scandir($dir . '/' . $directory);
+//     foreach ($files as $file) {
+//         if ($file == '.' or $file == '..') {
+//             continue;
+//         }
+//         $images[$directory][] = $file;
+//     }
+// }
+function format_string($str)
 {
-    $ret = sprintf('./public/images/%s-%s.jpg', $result['artist'], $result['label']);
-    $ret = str_replace(' ', '-', $ret);
-    $ret = preg_replace('/[:]/', '', $ret);
-    return strtolower($ret);
+    $str = str_replace(' ', '-', $str);
+    $str = preg_replace('/[:,;]/', '', $str);
+    return strtolower($str);
+}
+function album_cover($res)
+{
+    $dir = 'public/images/covers';
+    $ret = sprintf('%s/%s/%s/', $dir, $res['artist'], $res['label']);
+    $file = sprintf('%s-%s.jpg', $res['artist'], $res['label']);
+    $ret = format_string($ret .= $file);
+    file_exists($ret) ? $ret : $ret = 'https://picsum.photos/seed/seed/300/300';
+    return $ret;
+}
+
+function create_folders($res)
+{
+    $dir = "public/images/covers/" . $res['artist'] . "/" . $res['label'];
+    rename("public/images/covers/" . "/" . $res['artist'] . "/" . $res['label'], format_string($res['label']));
+    rename("public/images/covers/" . $res['artist'], format_string($res['artist']));
+
+    // if (!file_exists($dir))
+    // mkdir($dir, 0777, true);
 }
