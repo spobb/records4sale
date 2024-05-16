@@ -41,7 +41,7 @@
         </label>
 
     </nav>
-    <div class="profile-contact wrapper">
+    <div class="profile-tab wrapper">
         <div class="address column-wrapper">
             <span>Phone</span>
             <span>E-mail</span>
@@ -51,6 +51,16 @@
             <span>+32 485 58 45 75</span>
             <span>gverlaeken@student.efp.be</span>
             <span>Rue de Stalle, 292B 1180 Bruxelles</span>
+        </div>
+    </div>
+    <div class="profile-tab wrapper">
+        <div class="address column-wrapper">
+            <span>First name</span>
+            <span>Last name</span>
+        </div>
+        <div class="column-wrapper">
+            <span>Guillaume</span>
+            <span>Verlaeken</span>
         </div>
     </div>
 </main>
