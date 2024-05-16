@@ -60,6 +60,9 @@ main {
 	border: 1px solid var(--black);
 	border-top: none;
 }
+#item .item-info {
+	border: none;
+}
 .form > * {
 	width: auto;
 }
