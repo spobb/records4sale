@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>records4sale</title>
-    <link rel="stylesheet" href="css/r4s.css">
-    <link rel="stylesheet" href="css/queries.css" media="(min-width:576px)">
-    <link rel="stylesheet" href="css/desktop.css" media="(min-width:1024px)">
+    <link rel="stylesheet" href="public/css/r4s.css">
+    <link rel="stylesheet" href="public/css/queries.css" media="(min-width:576px)">
+    <link rel="stylesheet" href="public/css/desktop.css" media="(min-width:1024px)">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="public/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body id="<?php
@@ -22,18 +22,18 @@
     <header>
         <nav>
             <div class="home-buttons wrapper">
-                <a href="index.php?page=home" class="home"><img src="img/text-logo.png" alt="logo image"></a>
+                <a href="index.php?page=home" class="home"><img src="public/img/text-logo.png" alt="logo image"></a>
             </div>
             <div class="search-bar wrapper">
-                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
+                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="public/img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
                 <li class="register"><a href="index.php?page=register"><button>Sign up</button></a></li>
                 <li class="login"><a href="index.php?page=login"><button>Sign In</button></a></li>
-                <li class="profile"><a href="index.php?page=profile"><img src="img/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
+                <li class="profile"><a href="index.php?page=profile"><img src="public/img/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
-            <img src="img/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
+            <img src="public/img/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
         </nav>
     </header>
     <ul class="burger-menu hidden" id="burger-menu">
@@ -78,7 +78,7 @@
             </div>
             <div class="map">
                 <!-- map -->
-                <img src="img/map.png" alt="map of EFP">
+                <img src="public/img/map.png" alt="map of EFP">
             </div>
             <div>
                 <!-- copyright -->
@@ -87,8 +87,8 @@
         </div>
     </footer>
 
-    <script src="js/search.js"></script>
-    <script src="js/burger.js"></script>
+    <script src="public/js/search.js"></script>
+    <script src="public/js/burger.js"></script>
 </body>
 
 </html>

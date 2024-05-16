@@ -168,14 +168,14 @@ input[type='search']:focus {
 	height: auto;
 	appearance: none;
 	border: none;
-	mask: no-repeat center/115% url('img/svg/star.svg');
+	mask: no-repeat center/115% url('../img/svg/star.svg');
 	background: var(--accent-bg);
 }
 .stars + label {
 	display: none;
 }
 .stars-checked {
-	mask: no-repeat center/115% url('img/svg/star.svg');
+	mask: no-repeat center/115% url('../img/svg/star.svg');
 	background: var(--stars-checked);
 }
 .form {

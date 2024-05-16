@@ -4,4 +4,4 @@ $page = 'home';
 if (isset($_GET['page'])) {
     $page = realpath('pages/' . $_GET['page'] . '.php');
 }
-include 'pages/skeleton.php';
+include 'skeleton.php';
