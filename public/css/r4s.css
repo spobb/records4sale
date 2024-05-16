@@ -12,9 +12,6 @@
 	font-family: 'DM sans';
 	line-height: 1.5;
 }
-#item {
-	background: var(--outside-bg);
-}
 .column-wrapper {
 	display: flex;
 	align-items: center;
@@ -31,6 +28,9 @@ main {
 	min-height: 100vh;
 	margin: 0 auto;
 }
+/* .blur {
+	backdrop-filter: blur(16px);
+} */
 body > header {
 	position: sticky;
 	top: 0;
@@ -148,14 +148,17 @@ input[type='search']:focus {
 	grid-column: span 2;
 }
 .tracklist {
-	background: var(--accent-bg);
+	display: flex;
+	flex-flow: column wrap;
+	gap: 0.5rem;
 	max-height: 100%;
-	overflow: auto;
 	margin: 0 1rem;
 }
 .tracklist *:not(:last-child) {
 	padding: 1rem;
-	border-bottom: 1px solid var(--transp);
+	border: 1px solid var(--transp);
+	border-radius: 5px;
+	/* box-shadow: 4px 4px var(--transp); */
 }
 .review-stars {
 	max-width: fit-content;
@@ -191,6 +194,7 @@ form div {
 }
 .required::after {
 	content: ' *';
+	vertical-align: middle;
 	color: #f55;
 }
 form button {
@@ -215,21 +219,39 @@ textarea {
 	padding: 0.5rem;
 	resize: none;
 	background: var(--button-bg);
-	border: 1px solid var(--black);
+	border: 1px solid var(--transp);
+}
+input:focus,
+textarea:focus {
+	outline: none;
 }
 button,
 input[type='submit'] {
 	background: none;
-	border: 1px solid var(--black);
+	border: 1px solid var(--transp);
 	border-radius: 5px;
 	text-wrap: nowrap;
 	padding: 0.5rem 1.5rem;
 	width: fit-content;
 	background: var(--button-bg);
 	cursor: pointer;
+	transition: all 0.25s;
 }
 button:hover {
-	background: var(--button-bg-hover);
+	background: var(--header-bg);
+	border: 1px solid var(--white);
+	color: var(--white);
+}
+.header-button {
+	background: var(--header-bg);
+	color: var(--white);
+	border-color: var(--white);
+	transition: all 0.5s;
+}
+.header-button:hover {
+	background: var(--white);
+	color: var(--header-bg);
+	border-color: var(--header-bg);
 }
 h1 {
 	font-size: 2.2rem;
@@ -316,7 +338,11 @@ h1 {
 }
 .profile-nav label:has(input:checked) {
 	border-bottom: 3px solid var(--accent);
-	margin-bottom: -3px;
+	margin-bottom: -2px;
+}
+.profile-nav label:has(input) {
+	border-color: rgba(0, 0, 0, 0);
+	transition: border-color 0.5s;
 }
 .price + button {
 	margin-left: auto;

@@ -29,8 +29,8 @@
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
-                <li class="register"><a href="index.php?page=register"><button>Sign up</button></a></li>
-                <li class="login"><a href="index.php?page=login"><button>Sign In</button></a></li>
+                <li class="register"><a href="index.php?page=register"><button class="header-button">Sign up</button></a></li>
+                <li class="login"><a href="index.php?page=login"><button class="header-button">Sign In</button></a></li>
                 <li class="profile"><a href="index.php?page=profile"><img src="public/assets/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
             <img src="public/assets/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
