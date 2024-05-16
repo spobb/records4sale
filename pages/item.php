@@ -14,34 +14,38 @@ if (isset($_REQUEST['id'])) {
 }
 ?>
 
-<main>
-    <h1 class="overflow"><?= $res['label'] ?></h1>
-    <div class="item-page">
-        <div class="item-image">
-            <img src="<?= album_cover($res) ?>" alt="album cover">
-            <div class="column-wrapper item-info">
-                <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist overflow"><?= $res['artist'] ?></a>
-                <span><?= $res['genre'] ?></span>
-                <span><?= $res['release'] ?></span>
+<div style="background: no-repeat fixed 0%/cover url('<?= album_cover($res) ?>')">
+    <div class="blur">
+        <main>
+            <h1 class="overflow"><?= $res['label'] ?></h1>
+            <div class="item-page">
+                <div class="item-image">
+                    <img src="<?= album_cover($res) ?>" alt="album cover">
+                    <div class="column-wrapper item-info">
+                        <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist overflow"><?= $res['artist'] ?></a>
+                        <span><?= $res['genre'] ?></span>
+                        <span><?= $res['release'] ?></span>
+                    </div>
+                </div>
+                <ol class="tracklist">
+                    <li>song 01</li>
+                    <li>song 02</li>
+                    <li>song 03</li>
+                    <li>song 04</li>
+                    <li>song 05</li>
+                    <li>song 06</li>
+                    <li>song 07</li>
+                    <li>song 08</li>
+                    <li>runtime: <?php if ($res['runtime'] > 60) {
+                                        $h = floor($res['runtime'] / 60);
+                                        $m = $res['runtime'] % 60;
+                                        printf("%d hr %02d min", $h, $m);
+                                    } else echo $res['runtime'] . ' min'; ?></li>
+                </ol>
+                <footer id="review">
+                    <?php require 'pages/partials/review.php' ?>
+                </footer>
             </div>
-        </div>
-        <ol class="tracklist">
-            <li>song 01</li>
-            <li>song 02</li>
-            <li>song 03</li>
-            <li>song 04</li>
-            <li>song 05</li>
-            <li>song 06</li>
-            <li>song 07</li>
-            <li>song 08</li>
-            <li>runtime: <?php if ($res['runtime'] > 60) {
-                                $h = floor($res['runtime'] / 60);
-                                $m = $res['runtime'] % 60;
-                                printf("%d hr %02d min", $h, $m);
-                            } else echo $res['runtime'] . ' min'; ?></li>
-        </ol>
-        <footer id="review">
-            <?php require 'pages/partials/review.php' ?>
-        </footer>
+        </main>
     </div>
-</main>
+</div>
