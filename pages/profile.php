@@ -27,13 +27,13 @@
 
     <nav class="profile-nav wrapper">
 
+        <label for="profile-contact"><input type="radio" name="nav" id="profile-contact" checked>
+            Contact
+        </label>
+
         <label for="profile-about">
             <input type="radio" name="nav" id="profile-about">
             About
-        </label>
-
-        <label for="profile-contact"><input type="radio" name="nav" id="profile-contact">
-            Contact
         </label>
 
         <label for="profile-safety"><input type="radio" name="nav" id="profile-safety">

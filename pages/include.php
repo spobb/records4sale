@@ -4,7 +4,7 @@
 
 function album_cover($result)
 {
-    $ret = sprintf('./public/assets/%s-%s.jpg', $result['artist'], $result['label']);
+    $ret = sprintf('./public/images/%s-%s.jpg', $result['artist'], $result['label']);
     $ret = str_replace(' ', '-', $ret);
     $ret = preg_replace('/[:]/', '', $ret);
     return strtolower($ret);

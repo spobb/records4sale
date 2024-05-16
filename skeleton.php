@@ -22,18 +22,18 @@
     <header>
         <nav>
             <div class="home-buttons wrapper">
-                <a href="index.php?page=home" class="home"><img src="public/img/text-logo.png" alt="logo image"></a>
+                <a href="index.php?page=home" class="home"><img src="public/assets/text-logo.png" alt="logo image"></a>
             </div>
             <div class="search-bar wrapper">
-                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="public/img/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
+                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="public/assets/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
                 <li class="register"><a href="index.php?page=register"><button>Sign up</button></a></li>
                 <li class="login"><a href="index.php?page=login"><button>Sign In</button></a></li>
-                <li class="profile"><a href="index.php?page=profile"><img src="public/img/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
+                <li class="profile"><a href="index.php?page=profile"><img src="public/assets/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
-            <img src="public/img/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
+            <img src="public/assets/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
         </nav>
     </header>
     <ul class="burger-menu hidden" id="burger-menu">
@@ -78,7 +78,7 @@
             </div>
             <div class="map">
                 <!-- map -->
-                <img src="public/img/map.png" alt="map of EFP">
+                <img src="public/assets/map.png" alt="map of EFP">
             </div>
             <div>
                 <!-- copyright -->

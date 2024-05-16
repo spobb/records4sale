@@ -7,6 +7,7 @@
 }
 .nav-buttons {
 	display: flex;
+	gap: 1rem;
 }
 .burger-menu,
 #burger-button {
@@ -25,7 +26,7 @@ h1 {
 	font-size: 3rem;
 }
 main {
-	max-width: 1280px;
+	max-width: 1024px;
 }
 body > header nav {
 	display: grid;
@@ -81,10 +82,12 @@ body > header nav {
 	grid-column: span 1;
 }
 .hero-img {
-	height: 50vh;
+	height: 40vh;
 }
-.item-card img:hover {
+.item-card:hover {
 	padding: 0.2rem;
+}
+.item-card:hover img {
 	filter: brightness(80%);
 }
 
