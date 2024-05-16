@@ -1,6 +1,6 @@
 <main>
     <div class="form column-wrapper">
-        <form action="index.php?action=identify" method="POST">
+        <form action="index.php?action=identify" method="POST" autocomplete="off">
             <label for="user" class="required">Username</label>
             <input type="text" name="username" placeholder="Username" id="user" required>
             <label for="pass" class="required">Password</label>
