@@ -26,12 +26,19 @@
     </div>
 
     <nav class="profile-nav wrapper">
-        <input type="radio" name="nav" id="profile-about">
-        <label for="profile-about">About</label>
-        <input type="radio" name="nav" id="profile-contact">
-        <label for="profile-contact">Contact</label>
-        <input type="radio" name="nav" id="profile-safety">
-        <label for="profile-Safety">Safety</label>
+
+        <label for="profile-about">
+            <input type="radio" name="nav" id="profile-about">
+            About
+        </label>
+
+        <label for="profile-contact"><input type="radio" name="nav" id="profile-contact">
+            Contact
+        </label>
+
+        <label for="profile-safety"><input type="radio" name="nav" id="profile-safety">
+            Safety
+        </label>
 
     </nav>
     <div class="profile-contact wrapper">

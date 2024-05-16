@@ -1,5 +1,4 @@
 <?php
-require 'connection.php';
 require 'include.php';
 
 if (isset($_REQUEST['action'])) {

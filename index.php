@@ -1,4 +1,5 @@
 <?php
+include 'pages/connection.php';
 $page = 'home';
 
 if (isset($_GET['page'])) {

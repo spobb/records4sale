@@ -1,5 +1,4 @@
 <?php
-include 'connection.php';
 include 'include.php';
 
 if (isset($_REQUEST['id'])) {
