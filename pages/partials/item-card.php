@@ -12,7 +12,7 @@
                 ?></span>
         <footer>
             <span class="price"><?= $row['price'] . '' ?></span>
-            <button>Buy</button>
+            <button>Add</button>
         </footer>
     </div>
 </article>

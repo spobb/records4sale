@@ -28,9 +28,6 @@ main {
 	min-height: 100vh;
 	margin: 0 auto;
 }
-/* .blur {
-	backdrop-filter: blur(16px);
-} */
 body > header {
 	position: sticky;
 	top: 0;
@@ -41,7 +38,7 @@ body > header {
 	padding: 0 1rem;
 	z-index: 1;
 }
-body > header a,
+body > header,
 body > footer a {
 	color: var(--white);
 }
@@ -149,16 +146,16 @@ input[type='search']:focus {
 }
 .tracklist {
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row wrap;
 	gap: 0.5rem;
-	max-height: 100%;
 	margin: 0 1rem;
 }
 .tracklist *:not(:last-child) {
 	padding: 1rem;
+	width: 100%;
 	border: 1px solid var(--transp);
 	border-radius: 5px;
-	/* box-shadow: 4px 4px var(--transp); */
+	box-shadow: 4px 4px var(--transp);
 }
 .review-stars {
 	max-width: fit-content;
@@ -239,7 +236,6 @@ input[type='submit'] {
 }
 button:hover {
 	background: var(--header-bg);
-	border: 1px solid var(--white);
 	color: var(--white);
 }
 .header-button {
@@ -251,7 +247,6 @@ button:hover {
 .header-button:hover {
 	background: var(--white);
 	color: var(--header-bg);
-	border-color: var(--header-bg);
 }
 h1 {
 	font-size: 2.2rem;
