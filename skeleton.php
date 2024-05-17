@@ -29,8 +29,21 @@
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>
-                <li class="register"><a href="index.php?page=register"><button class="header-button">Sign up</button></a></li>
-                <li class="login"><a href="index.php?page=login"><button class="header-button">Sign In</button></a></li>
+                <?php if (isset($_SESSION['valid'])) {
+                    if ($_SESSION['valid']) {
+                ?>
+                        <li class="logout"><a href="index.php?page=logout"><button class="header-button">Sign out</button></a> </li>
+                    <?php
+                    }
+                    ?>
+                <?php
+                } else {
+                ?>
+                    <li class="register"><a href="index.php?page=register"><button class="header-button">Sign up</button></a></li>
+                    <li class="login"><a href="index.php?page=login"><button class="header-button">Sign in</button></a></li>
+                <?php
+                }
+                ?>
                 <li class="profile"><a href="index.php?page=profile"><img src="public/assets/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
             <img src="public/assets/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
@@ -38,8 +51,17 @@
     </header>
     <ul class="burger-menu hidden" id="burger-menu">
         <li class="profile"><a href="index.php?page=profile">Profile</a></li>
-        <li class="login"><a href="index.php?page=login">Sign in</a></li>
-        <li class="register"><a href="index.php?page=register">Sign up</a></li>
+        <?php if (!isset($_SESSION['valid'])) {
+            if (!$_SESSION['valid']);
+        ?>
+            <li class="login"><a href="index.php?page=login">Sign in</a></li>
+            <li class="register"><a href="index.php?page=register">Sign up</a></li>
+        <?php
+        } else {
+        ?>
+            <li class="logout"><a href="index.php?page=logout">Sign out</a></li>
+        <?php } ?>
+
         <li class="contact"><a href="index.php?page=contact">Contact</a></li>
         <li class="about"><a href="index.php?page=about">About us</a></li>
     </ul>
