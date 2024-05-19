@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHQ.woff2" crossorigin as="font" type="font/woff2">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
@@ -25,7 +26,7 @@
     <header>
         <nav>
             <div class="home-buttons wrapper">
-                <a href="index.php?page=home" class="home"><img src="public/assets/text-logo.png" alt="logo image"></a>
+                <a href="index.php?page=home" class="home">records<span>4</span>sale</a>
             </div>
             <div class="search-bar wrapper">
                 <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="public/assets/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
@@ -47,7 +48,7 @@
                 <?php
                 }
                 ?>
-                <li class="profile"><a href="index.php?page=profile"><img src="public/assets/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
+                <li class="profile header-icon"><a href="index.php?page=profile"><img src="public/assets/svg/profile.svg" alt="user profile icon" class="svg"></a></li>
             </ul>
             <img src="public/assets/svg/list.svg" alt="burger menu icon" id="burger-button" class="svg">
         </nav>
@@ -114,6 +115,7 @@
 
     <script src="public/js/search.js"></script>
     <script src="public/js/burger.js"></script>
+    <script src="public/js/links.js"></script>
 </body>
 
 </html>

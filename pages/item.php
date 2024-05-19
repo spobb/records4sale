@@ -43,11 +43,14 @@ if (isset($_REQUEST['id'])) {
             <li class="song">song 10</li>
             <li class="song">song 11</li>
             <li class="song">song 12</li>
-            <li>runtime: <?php if ($res['runtime'] > 60) {
-                                $h = floor($res['runtime'] / 60);
-                                $m = $res['runtime'] % 60;
-                                printf("%d hr %02d min", $h, $m);
-                            } else echo $res['runtime'] . ' min'; ?></li>
+            <li><?php if ($res['runtime'] <= 0) {
+                    if ($res['runtime'] > 60) {
+                        $h = floor($res['runtime'] / 60);
+                        $m = $res['runtime'] % 60;
+                        printf("runtime: %d hr %02d min", $h, $m);
+                    } else echo 'runtime:' . $res['runtime'] . ' min';
+                }
+                ?></li>
         </ol>
         <footer id="review">
             <?php require 'pages/partials/review.php' ?>

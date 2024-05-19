@@ -34,7 +34,8 @@ if (isset($_REQUEST['action'])) {
         FROM item i
         LEFT JOIN category c ON c.id = i.category_id 
         LEFT JOIN genre g ON g.id = i.genre_id 
-        LEFT JOIN artist a ON a.id = i.artist_id"
+        LEFT JOIN artist a ON a.id = i.artist_id
+        ORDER BY i.label ASC"
     );
     $statement = $pdo->query($sql);
     $results = $statement->fetchAll();

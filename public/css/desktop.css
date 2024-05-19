@@ -5,6 +5,36 @@
 	grid-column: 1;
 	justify-content: flex-start;
 }
+.home {
+	background: text no-repeat
+		linear-gradient(
+			45deg,
+			#ca4246 16.666%,
+			#e16541 16.666%,
+			#e16541 33.333%,
+			#f18f43 33.333%,
+			#f18f43 50%,
+			#8b9862 50%,
+			#8b9862 66.666%,
+			#476098 66.666%,
+			#476098 83.333%,
+			#a7489b 83.333%
+		);
+	background-position-x: -200%;
+	transition: color 250ms;
+}
+.home:hover {
+	animation: 400ms ease-in-out 1 colorslide;
+	color: transparent;
+}
+@keyframes colorslide {
+	from {
+		background-position-x: -300px;
+	}
+	to {
+		background-position-x: 0px;
+	}
+}
 .nav-buttons {
 	display: flex;
 	gap: 1rem;
@@ -26,7 +56,7 @@ h1 {
 	font-size: 3rem;
 }
 main {
-	max-width: 1024px;
+	max-width: 1280px;
 }
 body > header nav {
 	display: grid;
@@ -35,17 +65,18 @@ body > header nav {
 .item-catalog {
 	justify-content: center;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
 }
 .song {
 	scale: 100%;
-	transition: scale 100ms;
+	transition: scale 150ms;
 }
 .song:hover + .song,
 .song:has(+ .song:hover) {
 	scale: 102%;
 }
 .song:hover {
-	scale: 105%;
+	scale: 106%;
 }
 .form {
 	width: 100%;
