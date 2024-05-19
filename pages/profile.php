@@ -1,6 +1,6 @@
 <main>
     <div class="profile-hero wrapper">
-        <h1>Hello, John Doe</h1>
+        <h1>Hello, <?= $_SESSION['user']; ?></h1>
     </div>
 
     <h1>Your reviews</h1>
