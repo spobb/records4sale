@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="public/css/queries.css" media="(min-width:576px)">
     <link rel="stylesheet" href="public/css/desktop.css" media="(min-width:1024px)">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
