@@ -46,8 +46,8 @@ if (isset($_REQUEST['action'])) {
     <h1>Our records</h1>
     <section class="item-catalog column-wrapper">
         <?php
-        foreach ($results as $row) {
-            if ($row['label']) {
+        foreach ($results as $res) {
+            if ($res['label']) {
                 require 'partials/item-card.php';
             }
         }
