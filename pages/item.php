@@ -18,7 +18,12 @@ if (isset($_REQUEST['id'])) {
     <h1 class="overflow"><?= $res['label'] ?></h1>
     <div class="item-page">
         <div class="item-image">
-            <img src="<?= album_cover($res) ?>" alt="album cover">
+            <img src="<?php if (array_key_exists($res['id'], $images)) { ?>
+                public/images/covers/<?= $res['artist_id'] ?>/<?= $res['id'] ?>/<?= $images[$res['id']][0]; ?>
+            <?php } else { ?>
+                https://picsum.photos/seed/<?= $res['artist'] ?>/300/300
+            <?php } ?>
+            " alt="album cover">
             <div class="column-wrapper item-info">
                 <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist overflow"><?= $res['artist'] ?></a>
                 <span><?= $res['genre'] ?></span>
@@ -26,33 +31,18 @@ if (isset($_REQUEST['id'])) {
             </div>
         </div>
         <ol class="tracklist">
-            <li>song 01</li>
-            <li>song 02</li>
-            <li>song 03</li>
-            <li>song 04</li>
-            <li>song 05</li>
-            <li>song 06</li>
-            <li>song 07</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
-            <li>song 08</li>
+            <li class="song">song 01</li>
+            <li class="song">song 02</li>
+            <li class="song">song 03</li>
+            <li class="song">song 04</li>
+            <li class="song">song 05</li>
+            <li class="song">song 06</li>
+            <li class="song">song 07</li>
+            <li class="song">song 08</li>
+            <li class="song">song 09</li>
+            <li class="song">song 10</li>
+            <li class="song">song 11</li>
+            <li class="song">song 12</li>
             <li>runtime: <?php if ($res['runtime'] > 60) {
                                 $h = floor($res['runtime'] / 60);
                                 $m = $res['runtime'] % 60;
