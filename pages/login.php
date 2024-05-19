@@ -28,7 +28,7 @@ if (!empty($_POST['user']) && !empty($_POST['pass'])) {
             <label for="pass" class="required">Password</label>
             <input type="password" name="pass" placeholder="Password" id="pass" required>
             <button>Login</button>
-            <p class="form-footer">Don't have an account?<a href="index.php?page=register">Sign up</a></p>
+            <p class="form-footer">Don't have an account? <a href="index.php?page=register">Sign up</a></p>
         </form>
     </div>
 </main>
