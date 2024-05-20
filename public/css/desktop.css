@@ -23,11 +23,12 @@
 			#111 84%
 		);
 	background-position-x: 0px;
-	transition: color 350ms;
+	transition: color 350ms, scale 500ms;
 }
 .home:hover {
 	animation: 500ms ease-in-out 1 colorslide;
 	color: transparent;
+	scale: 105%;
 }
 @keyframes colorslide {
 	from {
@@ -50,17 +51,36 @@
 	align-items: center;
 	/* height: fit-content; */
 	gap: 0.5rem;
-	order: 0;
 	padding: 0.1rem;
-	background: var(--white);
+	order: 0;
+	background: var(--search-bg);
 	border-radius: 5px;
 }
 .search-bar > input {
 	display: initial;
-	align-items: center;
+	vertical-align: middle;
+}
+.search-bar > img {
+	justify-content: flex-start;
+	margin: 0 0.5rem;
+	padding: 0.2rem;
 }
 .search-bar > button {
-	border: 1px solid var(--header-bg);
+	border-color: 1px solid var(--header-bg);
+}
+.search-bar > button:hover {
+	background: var(--search-bg);
+}
+input[type='search'] {
+	appearance: none;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: none;
+	color: var(--black);
+}
+input[type='search']:focus {
+	outline: none;
 }
 h1 {
 	font-size: 3rem;

@@ -13,7 +13,9 @@
 		U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -128,19 +130,6 @@ a {
 }
 #burger-button {
 	margin: auto 0 auto auto;
-}
-input[type='search'] {
-	appearance: none;
-	padding: 0;
-	border: 0;
-	border-radius: 0;
-	background: none;
-	border-bottom: 2px solid var(--white);
-	padding-bottom: 0.5rem;
-	color: var(--white);
-}
-input[type='search']:focus {
-	outline: none;
 }
 .item-page {
 	display: flex;
@@ -386,8 +375,9 @@ img {
 	height: auto;
 }
 .svg {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 1.8rem;
+	height: 1.8rem;
+	vertical-align: middle;
 }
 #login .login,
 #register .register {
