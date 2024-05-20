@@ -49,6 +49,7 @@ if (isset($_REQUEST['action'])) {
         <?php
         foreach ($results as $res) {
             if ($res['label']) {
+                create_folders($res);
                 require 'partials/item-card.php';
             }
         }
