@@ -11,6 +11,30 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
                 a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
         </div>
+        <div class="review column-wrapper">
+            <h2 class="overflow">A valediction</h2>
+            <span>4.5/5</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
+                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
+        </div>
+        <div class="review column-wrapper">
+            <h2 class="overflow">A valediction</h2>
+            <span>4.5/5</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
+                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
+        </div>
+        <div class="review column-wrapper">
+            <h2 class="overflow">A valediction</h2>
+            <span>4.5/5</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
+                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
+        </div>
+        <div class="review column-wrapper">
+            <h2 class="overflow">A valediction</h2>
+            <span>4.5/5</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
+                a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
+        </div>
         <span>Add a review</span>
     </div>
 

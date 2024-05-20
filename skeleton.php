@@ -29,8 +29,10 @@
             <div class="home-buttons wrapper">
                 <a href="index.php?page=home" class="home">records<span>4</span>sale</a>
             </div>
-            <div class="search-bar wrapper">
-                <input type="search" id="search" placeholder="Search for an album or artist..." autocomplete="off"><button id="search-button"><img src="public/assets/svg/search.svg" alt="magnifying glass icon" class="svg"></button>
+            <div class="search-bar">
+                <img src="public/assets/svg/search.svg" alt="magnifying glass icon" class="svg">
+                <input type="search" id="search" placeholder="Search..." autocomplete="off">
+                <button id="search-button" class="header-button">Search</button>
             </div>
             <ul class="nav-buttons">
                 <li class="contact"><a href="index.php?page=contact">Contact</a></li>

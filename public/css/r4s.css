@@ -55,7 +55,8 @@ body > footer a {
 }
 body > header nav {
 	height: 100%;
-	margin-top: auto;
+	align-items: center;
+	/* margin-top: auto; */
 	display: grid;
 	grid-template-columns: 1fr 5fr 1fr;
 }
@@ -102,12 +103,6 @@ body > header nav {
 }
 .search-bar > input {
 	display: none;
-}
-#search-button {
-	border: 0;
-	padding: 0;
-	cursor: pointer;
-	background: none;
 }
 .nav-buttons {
 	display: none;
