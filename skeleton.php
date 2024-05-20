@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHQ.woff2" crossorigin as="font" type="font/woff2">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/da76ef87bd.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="public/assets/favicon.ico" type="image/x-icon">
 </head>

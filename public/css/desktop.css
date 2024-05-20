@@ -6,30 +6,32 @@
 	justify-content: flex-start;
 }
 .home {
-	background: text no-repeat
+	background: text no-repeat center/121%
 		linear-gradient(
 			45deg,
-			#ca4246 16.666%,
-			#e16541 16.666%,
-			#e16541 33.333%,
-			#f18f43 33.333%,
-			#f18f43 50%,
-			#8b9862 50%,
-			#8b9862 66.666%,
-			#476098 66.666%,
-			#476098 83.333%,
-			#a7489b 83.333%
+			#ca4246 14%,
+			#e16541 14%,
+			#e16541 28%,
+			#f18f43 28%,
+			#f18f43 42%,
+			#8b9862 42%,
+			#8b9862 56%,
+			#476098 56%,
+			#476098 70%,
+			#a7489b 70%,
+			#a7489b 84%,
+			#111 84%
 		);
-	background-position-x: -200%;
-	transition: color 250ms;
+	background-position-x: 0px;
+	transition: color 350ms;
 }
 .home:hover {
-	animation: 400ms ease-in-out 1 colorslide;
+	animation: 500ms ease-in-out 1 colorslide;
 	color: transparent;
 }
 @keyframes colorslide {
 	from {
-		background-position-x: -300px;
+		background-position-x: -360px;
 	}
 	to {
 		background-position-x: 0px;
@@ -67,6 +69,11 @@ body > header nav {
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1rem;
 }
+.artist {
+	width: fit-content;
+	background: text center/100% linear-gradient(45deg, #ca4246, #a7489b);
+	color: transparent;
+}
 .song {
 	scale: 100%;
 	transition: scale 150ms;
@@ -89,18 +96,33 @@ body > header nav {
 	align-items: center;
 	gap: 1rem;
 }
+.profile-nav {
+	display: flex;
+	justify-content: space-around;
+	max-width: fit-content;
+	gap: 4rem;
+	border-bottom: 1px solid var(--transp);
+	margin-bottom: 2rem;
+}
+.profile-nav input {
+	display: none;
+}
+.profile-nav label {
+	text-align: center;
+	width: 5rem;
+}
+.profile-nav label:has(input:checked) {
+	border-bottom: 3px solid var(--accent);
+	margin-bottom: -2px;
+}
+.profile-nav label:has(input) {
+	border-color: rgba(0, 0, 0, 0);
+	transition: border-color 0.5s;
+}
 .review {
 	height: 20rem;
 	border: 1px solid var(--black);
 	padding: 1rem;
-}
-.profile-tab {
-	justify-content: start;
-}
-.profile-tab * {
-	width: 80%;
-	gap: 2rem;
-	text-align: start;
 }
 .address {
 	width: 8rem;
@@ -124,14 +146,14 @@ body > header nav {
 	grid-column: span 1;
 }
 .hero-img {
-	height: 40vh;
+	height: 45vh;
 }
 .item-card:hover {
 	scale: 105%;
 }
-.item-card:hover img {
+/* .item-card:hover img {
 	filter: brightness(80%);
-}
+} */
 
 @media (min-width: 1280px) {
 	.profile-page {

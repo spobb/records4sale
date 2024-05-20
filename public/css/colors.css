@@ -14,7 +14,9 @@
 	--button-bg: #fff;
 	--button-bg-hover: #a7489b;
 
-	--stars-checked: #ffa534;
+	--stars-checked: #f18f43;
+	--stars-hover: #f1b443;
+	--stars-bg: #eee;
 
 	--transp: rgba(0, 0, 0, 0.3);
 	--extra: #aaa;

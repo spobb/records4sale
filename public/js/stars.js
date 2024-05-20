@@ -1,7 +1,7 @@
 let currentRating = 0;
-const stars = $('.review-stars > :radio').toArray();
+const stars = $('.stars > :radio').toArray();
 
-$('.review-stars > :radio').on('click', (e) => {
+$('.stars > :radio').on('click', (e) => {
     $('.stars-checked').removeClass('stars-checked');
     currentRating = parseInt(e.target.id);
     for(i = 0 ; i < currentRating; ++i) {

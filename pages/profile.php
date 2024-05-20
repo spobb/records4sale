@@ -1,26 +1,15 @@
+<div class="profile-hero wrapper">
+    <h1>Hello, <?= $_SESSION['user']; ?></h1>
+</div>
 <main>
-    <div class="profile-hero wrapper">
-        <h1>Hello, <?= $_SESSION['user']; ?></h1>
-    </div>
 
     <h1>Your reviews</h1>
     <div class="profile-reviews">
         <div class="review column-wrapper">
-            <h2>Title</h2>
-            <span>Rating</span>
+            <h2 class="overflow">A valediction</h2>
+            <span>4.5/5</span>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, voluptate. Eligendi debitis earum quisquam aliquid quis,
                 a cupiditate ratione corporis dolorum maiores deserunt quidem quia quam voluptatibus provident neque cum...</p>
-        </div>
-        <div class="review column-wrapper">
-            <h2>Title</h2>
-            <span>Rating</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, quo.</p>
-        </div>
-        <div class="review column-wrapper">
-            <h2>Title</h2>
-            <span>Rating</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam qui labore necessitatibus maxime quas.
-                Ipsam accusantium assumenda quo dignissimos ipsa?</p>
         </div>
         <span>Add a review</span>
     </div>
