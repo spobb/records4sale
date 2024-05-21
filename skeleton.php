@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>records4sale</title>
-    <link rel="preload" as="image" href="public/assets/hero.jpg">
     <link rel="stylesheet" href="public/css/r4s.css">
     <link rel="stylesheet" href="public/css/queries.css" media="(min-width:576px)">
     <link rel="stylesheet" href="public/css/desktop.css" media="(min-width:1024px)">

@@ -1,11 +1,3 @@
-main {
-	width: 80vw;
-}
-.item-page {
-	display: grid;
-	margin: auto;
-	grid-template-columns: 2fr 3fr;
-}
 .item-page .artist {
 	max-width: 10rem;
 }
@@ -54,6 +46,10 @@ main {
 	display: flex;
 	gap: 0.5rem;
 }
+.item-image {
+	width: 50vw;
+	max-width: 384px;
+}
 .item-info {
 	padding: 1rem;
 	grid-column: span 2;
@@ -78,6 +74,13 @@ main {
 	text-align: center;
 }
 @media (min-width: 768px) {
+	body {
+		background: var(--outside-bg);
+	}
+	main {
+		padding: 0 5vw;
+		width: 90vw;
+	}
 	.item-catalog {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}

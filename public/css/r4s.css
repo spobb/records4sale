@@ -140,7 +140,7 @@ a {
 	padding: 2rem;
 }
 .item-image {
-	min-width: 216px;
+	width: 75vw;
 	margin: 0 auto;
 }
 .item-page footer {
@@ -177,6 +177,7 @@ a {
 	content: '\f005';
 }
 .stars > .half:before {
+	position: absolute;
 	content: '\f089';
 }
 .stars input:checked + label,
@@ -272,9 +273,7 @@ h1 {
 }
 .item-catalog {
 	margin: 0 auto;
-	/* max-width: 95vw; */
 	display: flex;
-	/* gap: 0.5rem; */
 }
 .title {
 	color: var(--black);
