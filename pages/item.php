@@ -25,7 +25,8 @@ if (isset($_REQUEST['id'])) {
             <?php } ?>
             " alt="album cover">
             <div class="column-wrapper item-info">
-                <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>" class="artist overflow"><?= $res['artist'] ?></a>
+                <a href="index.php?page=artist&id=<?= $res['artist_id'] ?>"
+                    class="artist overflow"><?= $res['artist'] ?></a>
                 <span><?= $res['genre'] ?></span>
                 <span><?= $res['release'] ?></span>
             </div>
@@ -44,13 +45,14 @@ if (isset($_REQUEST['id'])) {
             <li class="song">song 11</li>
             <li class="song">song 12</li>
             <li><?php if ($res['runtime'] <= 0) {
-                    if ($res['runtime'] > 60) {
-                        $h = floor($res['runtime'] / 60);
-                        $m = $res['runtime'] % 60;
-                        printf("runtime: %d hr %02d min", $h, $m);
-                    } else echo 'runtime:' . $res['runtime'] . ' min';
-                }
-                ?></li>
+                if ($res['runtime'] > 60) {
+                    $h = floor($res['runtime'] / 60);
+                    $m = $res['runtime'] % 60;
+                    printf("runtime: %d hr %02d min", $h, $m);
+                } else
+                    echo 'runtime:' . $res['runtime'] . ' min';
+            }
+            ?></li>
         </ol>
         <footer id="review">
             <?php require 'pages/partials/review.php' ?>

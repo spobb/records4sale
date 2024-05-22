@@ -55,7 +55,7 @@
 	grid-column: span 2;
 	margin-left: 0;
 	border: 1px solid var(--transp);
-	box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1);
+	/* box-shadow: var(--bx-shadow); */
 	border-top: none;
 }
 #item .item-info {
@@ -74,12 +74,9 @@
 	text-align: center;
 }
 @media (min-width: 768px) {
-	body {
-		background: var(--outside-bg);
-	}
 	main {
 		padding: 0 5vw;
-		width: 90vw;
+		width: 80vw;
 	}
 	.item-catalog {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
