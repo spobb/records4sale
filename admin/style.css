@@ -24,6 +24,7 @@ main {
 	color: gray;
 	background-color: #eef;
 	box-shadow: 0 0.5rem #ccf;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -52,7 +53,18 @@ li:hover {
 	box-shadow: 0 0.25rem 0 0 #ccc;
 	transform: translateY(0.25rem);
 }
-
+label {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+input {
+	margin: 0.75rem 0;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	background-color: #eee;
+	box-shadow: 0 0.25rem 0 0 #ccc;
+}
 input:focus {
 	outline: none;
 }
@@ -67,7 +79,8 @@ ul {
 }
 [readonly] {
 	background: #faa;
-	box-shadow: 0 0.5rem #f77;
+	box-shadow: 0 0.25rem #f77;
+	cursor: not-allowed;
 }
 [readonly]:hover {
 	background: #e55;
@@ -81,5 +94,4 @@ form {
 	display: flex;
 	flex-flow: column nowrap;
 	width: 20vw;
-	gap: 1rem;
 }

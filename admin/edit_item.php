@@ -18,13 +18,13 @@ if (isset($_GET['id'])) {
     $record = $stmt->fetch();
 }
 
-$sql = 'SELECT * FROM artist';
+$sql = 'SELECT * FROM artist ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $artists = $stmt->fetchAll();
-$sql = 'SELECT * FROM genre';
+$sql = 'SELECT * FROM genre ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $genres = $stmt->fetchAll();
-$sql = 'SELECT * FROM category';
+$sql = 'SELECT * FROM category ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $categories = $stmt->fetchAll();
 ?>
