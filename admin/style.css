@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+}
+.button {
+	border: none;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	border-radius: 1rem;
+	color: gray;
+	background-color: #eef;
+	box-shadow: 0 10px #ccf;
+}
+
+.button:hover {
+	background-color: #ddf;
+}
+a,
+input {
+	text-decoration: none;
+	border: none;
+	color: gray;
+	padding: 0.5rem 0.75rem;
+	margin: 0.5rem;
+	border-radius: 1rem;
+	background-color: #eee;
+	box-shadow: 0 10px 0 0 #ccc;
+}
+
+li {
+	padding: 0.5rem 1rem;
+	margin: 0.5rem;
+}
+ul {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	max-height: 90vh;
+	list-style: none;
+}

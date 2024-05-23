@@ -2,7 +2,7 @@
 //database connection
 session_start();
 
-require_once 'pages/connection.php';
+require_once 'connection.php';
 require_once 'app/include.php';
 
 $page = 'home';
