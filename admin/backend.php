@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <?php
-    require $page;
-    ?>
+    <main>
+        <?php
+        require $page;
+        ?>
+    </main>
 </body>
 
 </html>

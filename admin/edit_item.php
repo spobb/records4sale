@@ -50,22 +50,36 @@ $categories = $stmt->fetchAll();
 
     <label for="artist">Artist</label>
     <select name="artist">
-        <?php foreach ($artists as $a) {
-            printf('<option value="%s">%s</option>', $a['id'], $a['label']);
+        <?php
+        foreach ($artists as $a) {
+            echo '<option ';
+            if ($a['id'] == $record['artist_id']) {
+                echo 'selected ';
+            }
+            printf('value="%s">%s</option>', $a['id'], $a['label']);
         } ?>
     </select>
     <label for="genre">Genre</label>
     <select name="genre">
         <?php foreach ($genres as $g) {
-            printf('<option value="%s">%s</option>', $g['id'], $g['label']);
+            echo '<option ';
+            if ($g['id'] == $record['genre_id']) {
+                echo 'selected ';
+            }
+            printf('value="%s">%s</option>', $g['id'], $g['label']);
         } ?>
     </select>
     <label for="category">Category</label>
     <select name="category">
-        <?php foreach ($categories as $g) {
-            printf('<option value="%s">%s</option>', $g['id'], $g['label']);
+        <?php foreach ($categories as $c) {
+            echo '<option ';
+            if ($c['id'] == $record['category_id']) {
+                echo 'selected ';
+            }
+            printf('value="%s">%s</option>', $c['id'], $c['label']);
         } ?>
     </select>
 
     <button class="button">Save</button>
 </form>
+<a href="index.php?page=listing" class="button">Cancel</a>

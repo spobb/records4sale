@@ -5,6 +5,15 @@
 	padding: 0;
 	font-family: sans-serif;
 }
+main {
+	margin: 1rem;
+	min-height: 100dvh;
+}
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	margin: 1rem;
+}
 .button {
 	border: none;
 	display: inline-block;
@@ -14,32 +23,38 @@
 	border-radius: 1rem;
 	color: gray;
 	background-color: #eef;
-	box-shadow: 0 10px #ccf;
+	box-shadow: 0 0.5rem #ccf;
 }
 
 .button:hover {
-	box-shadow: 0 5px #ccf;
-	transform: translateY(5px);
+	box-shadow: 0 0.25rem #ccf;
+	transform: translateY(0.25rem);
 }
 hr {
-	margin: 1rem;
-}
-a,
-input {
-	text-decoration: none;
-	border: none;
-	color: gray;
-	padding: 0.5rem;
-	border-radius: 1rem;
-	background-color: #eee;
-	box-shadow: 0 10px 0 0 #ccc;
-	&:focus {
-		outline: none;
-	}
+	border: 0;
+	border-top: 1px solid #ddd;
+	margin: 1em;
 }
 li {
 	margin: 0.75rem 0;
 	width: fit-content;
+	border: none;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	background-color: #eee;
+	box-shadow: 0 0.5rem 0 0 #ccc;
+}
+li > a {
+	text-decoration: none;
+	color: gray;
+}
+li:hover {
+	box-shadow: 0 0.25rem 0 0 #ccc;
+	transform: translateY(0.25rem);
+}
+
+input:focus {
+	outline: none;
 }
 ul {
 	display: flex;
@@ -48,13 +63,21 @@ ul {
 	max-height: 20vh;
 	list-style: none;
 	margin: 1rem;
-	gap: 0.1rem;
+	gap: 0.25rem;
 }
 [readonly] {
 	background: #faa;
-	box-shadow: 0 10px #f77;
+	box-shadow: 0 0.5rem #f77;
+}
+[readonly]:hover {
+	background: #e55;
+}
+option[selected] {
+	background: #ccc;
 }
 form {
+	align-items: center;
+	max-width: 100vw;
 	display: flex;
 	flex-flow: column nowrap;
 	width: 20vw;

@@ -40,4 +40,14 @@
         }
         ?>
     </ul>
+    <hr>
+    <h1>Items</h1>
+    <ul>
+        <?php
+        $stmt = $pdo->query('SELECT * FROM item');
+        while ($row = $stmt->fetch()) {
+            printf('<li><a href="index.php?page=edit&id=%d&type=item">%s</a></li>', $row['id'], $row['label']);
+        }
+        ?>
+    </ul>
 </div>
