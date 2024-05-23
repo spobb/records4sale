@@ -42,9 +42,9 @@ function format_string($str)
 //     return $ret;
 // }
 
-function create_folders($res)
+function create_folders(array $results)
 {
-    $dir = "public/images/covers/" . $res['artist_id'] . "/" . $res['id'];
+    $dir = "public/images/covers/" . $results['artist_id'] . "/" . $results['id'];
 
     if (!file_exists($dir)) {
         mkdir($dir, 0777, true);
