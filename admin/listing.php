@@ -13,41 +13,46 @@
     </form>
     <hr>
 
-    <h1>Artists</h1>
-    <ul>
-        <?php
-        $stmt = $pdo->query('SELECT * FROM artist');
-        while ($row = $stmt->fetch()) {
-            printf('<li><a href="index.php?page=edit&id=%d&type=artist">%s</a></li>', $row['id'], $row['label']);
-        } ?>
-    </ul>
-    <hr>
-    <h1>Genres</h1>
-    <ul>
-        <?php
-        $stmt = $pdo->query('SELECT * FROM genre');
-        while ($row = $stmt->fetch()) {
-            printf('<li><a href="index.php?page=edit&id=%d&type=genre">%s</a></li>', $row['id'], $row['label']);
-        } ?>
-    </ul>
-    <hr>
-    <h1>Categories</h1>
-    <ul>
-        <?php
-        $stmt = $pdo->query('SELECT * FROM category');
-        while ($row = $stmt->fetch()) {
-            printf('<li><a href="index.php?page=edit&id=%d&type=category">%s</a></li>', $row['id'], $row['label']);
-        }
-        ?>
-    </ul>
-    <hr>
-    <h1>Items</h1>
-    <ul>
-        <?php
-        $stmt = $pdo->query('SELECT * FROM item');
-        while ($row = $stmt->fetch()) {
-            printf('<li><a href="index.php?page=edit&id=%d&type=item">%s</a></li>', $row['id'], $row['label']);
-        }
-        ?>
-    </ul>
+    <div class="artists tab">
+        <h1>Artists</h1>
+        <ul>
+            <?php
+            $stmt = $pdo->query('SELECT * FROM artist ORDER BY label ASC');
+            while ($row = $stmt->fetch()) {
+                printf('<li><a href="index.php?page=edit&id=%d&type=artist">%s</a></li>', $row['id'], $row['label']);
+            } ?>
+        </ul>
+    </div>
+    <div class="genres tab">
+        <h1>Genres</h1>
+        <ul>
+            <?php
+            $stmt = $pdo->query('SELECT * FROM genre ORDER BY label ASC');
+            while ($row = $stmt->fetch()) {
+                printf('<li><a href="index.php?page=edit&id=%d&type=genre">%s</a></li>', $row['id'], $row['label']);
+            } ?>
+        </ul>
+    </div>
+    <div class="categories tab">
+        <h1>Categories</h1>
+        <ul>
+            <?php
+            $stmt = $pdo->query('SELECT * FROM category ORDER BY label ASC');
+            while ($row = $stmt->fetch()) {
+                printf('<li><a href="index.php?page=edit&id=%d&type=category">%s</a></li>', $row['id'], $row['label']);
+            }
+            ?>
+        </ul>
+    </div>
+    <div class="items tab">
+        <h1>Items</h1>
+        <ul>
+            <?php
+            $stmt = $pdo->query('SELECT * FROM item ORDER BY label ASC');
+            while ($row = $stmt->fetch()) {
+                printf('<li><a href="index.php?page=edit&id=%d&type=item">%s</a></li>', $row['id'], $row['label']);
+            }
+            ?>
+        </ul>
+    </div>
 </div>

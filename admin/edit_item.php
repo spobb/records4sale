@@ -8,7 +8,10 @@ $record = [
     'runtime' => '',
     'artist' => '',
     'genre' => '',
-    'category' => ''
+    'category' => '',
+    'artist_id' => '',
+    'genre_id' => '',
+    'category_id' => ''
 ];
 
 if (isset($_GET['id'])) {
