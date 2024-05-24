@@ -22,8 +22,9 @@
 
 	--transp: rgba(0, 0, 0, 0.3);
 	--extra: #aaa;
+	--border: #ccc;
 
-	--bdr-rad: 2px;
+	--bdr-rad: 1rem;
 
 	--bx-shadow: 0 10px 5px -2px #0002;
 }

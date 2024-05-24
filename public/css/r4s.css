@@ -6,11 +6,8 @@
 	font-style: normal;
 	font-weight: 100 1000;
 	font-display: swap;
-	src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHQ.woff2)
-		format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-		U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	src: url(https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 *,
@@ -74,9 +71,12 @@ a {
 	color: var(--black);
 	text-decoration: none;
 }
+hr {
+	margin: 2rem;
+	border-top: none;
+}
 .hero-img {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		no-repeat scroll center 25% / cover url('../assets/hero.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), no-repeat scroll center 25% / cover url('../assets/hero.jpg');
 	height: 20vh;
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
@@ -171,7 +171,7 @@ a {
 .tracklist *:not(:last-child) {
 	padding: 1rem;
 	width: 100%;
-	border: 1px solid var(--transp);
+	border: 1px solid var(--border);
 	border-radius: var(--bdr-rad);
 }
 .stars {
@@ -280,7 +280,7 @@ textarea {
 	padding: 0.5rem;
 	resize: none;
 	background: var(--button-bg);
-	border: 1px solid var(--transp);
+	border: 1px solid var(--border);
 }
 input:focus,
 textarea:focus {
@@ -293,7 +293,7 @@ input[type='submit'] {
 	background: var(--button-bg);
 	text-wrap: nowrap;
 	width: fit-content;
-	border: 1px solid var(--transp);
+	border: 1px solid var(--border);
 	border-radius: var(--bdr-rad);
 	cursor: pointer;
 	padding: 0.5rem 1.5rem;
@@ -381,10 +381,34 @@ button:hover {
 	align-content: center;
 }
 .profile-nav {
-	display: none;
+	display: flex;
+	margin-bottom: 2rem;
+}
+.tabs {
+	width: 100%;
+	min-height: 20rem;
+	border: 1px solid var(--border);
+	border-top: none;
 }
 .profile-tab {
+	display: none;
+}
+.profile-tab.active {
+	display: flex;
+	flex: 1 1 100%;
 	justify-content: start;
+}
+.tab-button {
+	flex: 1 1 0;
+	outline: none;
+	border-radius: 0;
+	background-color: var(--white);
+}
+.tab-button.active {
+	background-color: var(--accent);
+}
+.tab-button:hover:not(.active) {
+	background-color: var(--accent-hover);
 }
 .profile-tab * {
 	width: 80%;
