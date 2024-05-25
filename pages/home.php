@@ -55,5 +55,6 @@ if (isset($_REQUEST['action'])) {
             }
         }
         ?>
-    </section>
+    </section>1
 </main>
+<script src="public/js/pagination.js"></script>

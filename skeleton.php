@@ -136,7 +136,6 @@ if (isset($_GET['page'])) {
     <script src="public/js/search.js"></script>
     <script src="public/js/burger.js"></script>
     <script src="public/js/links.js"></script>
-    <script src="public/js/pagination.js"></script>
 </body>
 
 </html>
