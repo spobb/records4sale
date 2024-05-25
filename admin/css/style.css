@@ -1,5 +1,6 @@
 :root {
-	--radius: 0.1rem;
+	--radius: 0.5rem;
+	--accent: rgb(255, 136, 0);
 }
 
 *,
@@ -8,6 +9,11 @@
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	color: white;
+}
+
+body {
+	background: #111;
 }
 main {
 	min-height: 100dvh;
@@ -25,19 +31,18 @@ main {
 	margin: 1rem;
 	text-decoration: none;
 	border-radius: var(--radius);
-	color: gray;
-	background-color: #eef;
-	box-shadow: 0 0.5rem #ccf;
+	background-color: #999;
+	box-shadow: 0 0.5rem #777;
 	cursor: pointer;
 }
 .button:hover {
-	box-shadow: 0 0.25rem #ccf;
+	box-shadow: 0 0.25rem #777;
 	transform: translateY(0.25rem);
 }
 li {
 	border: none;
 	border-radius: var(--radius);
-	background-color: #eee;
+	background-color: #555;
 	flex: content;
 	text-align: center;
 	/* box-shadow: 0 0.5rem 0 0 #ccc; */
@@ -50,7 +55,6 @@ li > a {
 	padding: 0.5rem;
 	display: block;
 	text-decoration: none;
-	color: gray;
 }
 a {
 	text-align: center;
@@ -64,7 +68,8 @@ input {
 	border: none;
 	padding: 0.5rem;
 	border-radius: var(--radius);
-	background-color: #eee;
+	background-color: #555;
+	color: var(--accent);
 	/* box-shadow: 0 0.25rem 0 0 #ccc; */
 }
 input:focus {
@@ -75,8 +80,10 @@ ul {
 	flex-flow: wrap;
 	justify-content: space-between stretch;
 	list-style: none;
-	margin: 1rem;
+	padding: 0.5rem;
 	gap: 0.25rem;
+	border-bottom-left-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
 }
 ul::after {
 	content: '';
@@ -94,11 +101,30 @@ form {
 	flex-flow: column nowrap;
 	width: 20vw;
 }
+select {
+	color: #111;
+}
+option {
+	color: #111;
+}
 [readonly] {
 	background: #faa;
 	/* box-shadow: 0 0.25rem #f77; */
 	cursor: not-allowed;
+	color: #111;
+	text-transform: uppercase;
 }
 [readonly]:hover {
 	background: #e55;
+}
+.tab {
+	background-color: #333;
+	margin: 0.5rem 0;
+	border-radius: var(--radius);
+	border: 1px solid #999;
+}
+.tab h1 {
+	padding: 0.5rem;
+	border-bottom: 1px solid #999;
+	color: var(--accent);
 }
