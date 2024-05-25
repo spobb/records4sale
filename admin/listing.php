@@ -7,6 +7,7 @@
                 <option value="artist">Artist</option>
                 <option value="genre">Genre</option>
                 <option value="category">Category</option>
+                <option value="song" selected>Song</option>
                 <option value="item">Item</option>
             </select>
         </label>
@@ -40,6 +41,17 @@
             $stmt = $pdo->query('SELECT * FROM category ORDER BY label ASC');
             while ($row = $stmt->fetch()) {
                 printf('<li><a href="index.php?page=edit&id=%d&type=category">%s</a></li>', $row['id'], $row['label']);
+            }
+            ?>
+        </ul>
+    </div>
+    <div class="songs tab">
+        <h1>Songs</h1>
+        <ul>
+            <?php
+            $stmt = $pdo->query('SELECT * FROM song ORDER BY label ASC');
+            while ($row = $stmt->fetch()) {
+                printf('<li><a href="index.php?page=edit&id=%d&type=song">%s</a></li>', $row['id'], $row['label']);
             }
             ?>
         </ul>
