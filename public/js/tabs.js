@@ -9,7 +9,6 @@ tabs.addEventListener('click', (e) => {
 			b.classList.remove('active');
 		});
 		e.target.classList.add('active');
-		console.log('active');
 
 		tab.forEach((t) => {
 			t.classList.remove('active');

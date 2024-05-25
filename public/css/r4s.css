@@ -318,9 +318,20 @@ button:hover {
 	margin: 0 auto;
 	display: flex;
 }
+.page-buttons {
+	gap: 0.5rem;
+	margin: 0 0 2rem;
+}
+.page-button {
+	width: 5rem;
+}
+.page-button.active {
+	background-color: var(--header-bg);
+	color: var(--white);
+}
 .title {
 	color: var(--black);
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 .overflow {
 	display: block;
@@ -331,6 +342,7 @@ button:hover {
 	overflow: hidden;
 }
 .artist {
+	font-size: 0.9rem;
 	color: var(--accent);
 	/* text-decoration: none; */
 	transition: color 250ms;

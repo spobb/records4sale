@@ -1,5 +1,5 @@
 main {
-	max-width: 60vw;
+	max-width: 75vw;
 }
 input[type='search'] {
 	appearance: none;
@@ -144,6 +144,9 @@ body > header nav {
 .hero-img {
 	height: 45vh;
 }
+.item-card {
+	font-size: 0.9rem;
+}
 .item-card:hover {
 	scale: 105%;
 }
@@ -157,6 +160,9 @@ body > header nav {
 } */
 
 @media (min-width: 1280px) {
+	main {
+		max-width: 1280px;
+	}
 	.profile-page {
 		margin-left: auto;
 	}

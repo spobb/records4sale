@@ -45,6 +45,7 @@ if (isset($_REQUEST['action'])) {
 <main>
 
     <h1>Our records</h1>
+    <div class="page-buttons wrapper"></div>
     <section class="item-catalog column-wrapper">
         <?php
         foreach ($results as $res) {
