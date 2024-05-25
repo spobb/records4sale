@@ -343,9 +343,11 @@ button:hover {
 }
 .artist {
 	font-size: 0.9rem;
-	color: var(--accent);
 	/* text-decoration: none; */
 	transition: color 250ms;
+	width: fit-content;
+	background: text center/100% linear-gradient(45deg, #ca4246, #a7489b);
+	color: transparent;
 }
 .artist:hover {
 	color: var(--accent-hover) !important;
@@ -438,6 +440,7 @@ body > footer {
 	box-shadow: 0 -4px 10px -2px var(--transp);
 	background-color: var(--header-bg);
 	padding: 1rem;
+	margin-top: 2rem;
 }
 .footer {
 	display: grid;

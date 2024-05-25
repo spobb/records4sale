@@ -4,11 +4,11 @@
         <input type="hidden" name="page" value="edit">
         <label>Type:
             <select name="type">
+                <option value="item" selected>Item</option>
+                <option value="song">Song</option>
                 <option value="artist">Artist</option>
                 <option value="genre">Genre</option>
                 <option value="category">Category</option>
-                <option value="song" selected>Song</option>
-                <option value="item">Item</option>
             </select>
         </label>
     </form>
