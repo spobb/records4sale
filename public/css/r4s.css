@@ -82,8 +82,7 @@ hr {
 }
 .profile-hero {
 	background-color: var(--outside-bg);
-	/* background: center/100% linear-gradient(20deg, #ca4246, #a7489b 60%); */
-	/* background: center/100% linear-gradient(20deg, #ca424655, #a7489b55); */
+	background: center/cover var(--gradient);
 	box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 	height: 20vh;
 }
@@ -324,10 +323,17 @@ button:hover {
 }
 .page-button {
 	width: 5rem;
+	transition: all 250ms;
+	color: var(--black);
+	background: var(--button-bg);
 }
 .page-button.active {
-	background-color: var(--header-bg);
+	background: var(--header-bg);
 	color: var(--white);
+	scale: 120%;
+}
+.page-button:hover {
+	background: var(--button-bg-hover);
 }
 .title {
 	color: var(--black);
@@ -346,11 +352,12 @@ button:hover {
 	/* text-decoration: none; */
 	transition: color 250ms;
 	width: fit-content;
-	background: text center/100% linear-gradient(45deg, #ca4246, #a7489b);
+	background: text center/100% var(--gradient);
 	color: transparent;
+	/* color: var(--accent2); */
 }
 .artist:hover {
-	color: var(--accent-hover) !important;
+	color: var(--accent2-hover) !important;
 }
 .item-card {
 	display: grid;

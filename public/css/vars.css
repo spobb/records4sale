@@ -8,11 +8,13 @@
 	--menu-bg: #444;
 	--outside-bg: #222;
 
-	--accent: #a7489b;
-	--accent-hover: #ce59be44;
+	--accent: #9063cd;
+	--accent-hover: #9063cd99;
+	--accent2: #cd6d63;
+	--accent2-hover: #cd638599;
 
 	--button-bg: #fff;
-	--button-bg-hover: #111;
+	--button-bg-hover: #444;
 
 	--search-bg: #eee;
 
@@ -27,4 +29,6 @@
 	--bdr-rad: 1rem;
 
 	--bx-shadow: 0 10px 5px -2px #0002;
+	--gradient: linear-gradient(45deg, var(--accent) 20%, var(--accent2) 80%);
+	--gradient2: linear-gradient(45deg, #ca4246 25%, #e16541 25%, #e16541 37.5%, #f18f43 37.5%, #f18f43 50%, #8b9862 50%, #8b9862 62.5%, #476098 62.5%, #476098 75%, #a7489b 75%, #a7489b 100%);
 }

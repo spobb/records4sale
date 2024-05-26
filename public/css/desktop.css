@@ -19,6 +19,9 @@ body > header nav {
 	display: grid;
 	grid-template-columns: 2fr 1fr 2fr;
 }
+.profile-hero {
+	background: fixed center/cover var(--gradient);
+}
 .item-page {
 	max-width: 90%;
 	display: grid;
@@ -85,11 +88,6 @@ body > header nav {
 	justify-content: center;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1rem;
-}
-.artist {
-	width: fit-content;
-	background: text center/100% linear-gradient(45deg, #ca4246, #a7489b);
-	color: transparent;
 }
 .song {
 	scale: 100%;
