@@ -53,21 +53,6 @@
     <div class="tabs">
         <nav class="profile-nav wrapper">
 
-            <!-- <label for="profile-contact"><input type="radio" name="nav" id="profile-contact" class="tab=button"
-                    data-id="tab1" checked>
-                Contact
-            </label>
-    
-            <label for="profile-about">
-                <input type="radio" name="nav" id="profile-about" class="tab=button" data-id="tab2">
-                About
-            </label>
-    
-            <label for="profile-safety"><input type="radio" name="nav" id="profile-safety" class="tab=button"
-                    data-id="tab3">
-                Safety
-            </label> -->
-
             <button class="tab-button active" data-id="tab1">Contact</button>
             <button class="tab-button" data-id="tab2">About</button>
             <button class="tab-button" data-id="tab3">Safety</button>
