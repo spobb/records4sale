@@ -36,8 +36,7 @@ $categories = $stmt->fetchAll();
     <label for="type">Type</label>
     <input type="text" name="type" value="<?= $_GET['type']; ?>" readonly>
 
-    <label for="id">ID</label>
-    <input type="text" name="id" value="<?= $record['id']; ?>" readonly>
+    <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
 
     <label for="label">Label</label>
     <input type="text" name="label" value="<?= $record['label']; ?>">
