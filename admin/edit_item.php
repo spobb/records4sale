@@ -15,7 +15,12 @@ $record = [
 ];
 
 if (isset($_GET['id'])) {
-    $sql = 'SELECT * FROM item WHERE id = ?';
+    $sql = 'SELECT item.*, GROUP_CONCAT(genre.id) as genre_ids  
+        FROM item 
+        JOIN item_genre ON item_genre.item_id = item.id
+        JOIN genre ON item_genre.genre_id = genre.id 
+        WHERE item.id = ?
+        GROUP BY item.id';
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$_GET['id']]);
     $record = $stmt->fetch();
@@ -24,12 +29,13 @@ if (isset($_GET['id'])) {
 $sql = 'SELECT * FROM artist ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $artists = $stmt->fetchAll();
-$sql = 'SELECT * FROM genre ORDER BY label ASC';
-$stmt = $pdo->query($sql);
-$genres = $stmt->fetchAll();
 $sql = 'SELECT * FROM category ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $categories = $stmt->fetchAll();
+$sql = 'SELECT * FROM genre ORDER BY label ASC';
+$stmt = $pdo->query($sql);
+$genres = $stmt->fetchAll();
+
 ?>
 
 <form action="save.php" method="POST" class="form">
@@ -61,16 +67,6 @@ $categories = $stmt->fetchAll();
             printf('value="%s">%s</option>', $a['id'], $a['label']);
         } ?>
     </select>
-    <label for="genre">Genre</label>
-    <select name="genre">
-        <?php foreach ($genres as $g) {
-            echo '<option ';
-            if ($g['id'] == $record['genre_id']) {
-                echo 'selected ';
-            }
-            printf('value="%s">%s</option>', $g['id'], $g['label']);
-        } ?>
-    </select>
     <label for="category">Category</label>
     <select name="category">
         <?php foreach ($categories as $c) {
@@ -81,6 +77,36 @@ $categories = $stmt->fetchAll();
             printf('value="%s">%s</option>', $c['id'], $c['label']);
         } ?>
     </select>
+
+    <div class="tags">
+
+        <?php
+        $genre = explode(',', $record['genre_ids']);
+        foreach ($genres as $g) {
+            if (in_array($g['id'], $genre)) {
+                printf('<span class="tag">%s</span>', $g['label']);
+            }
+        }
+        ?>
+    </div>
+
+    <fieldset>
+        <legend>Select genres</legend>
+        <?php
+        $sql = "SELECT *, i.label as item, g.label as genre 
+        FROM item_genre ig 
+        JOIN item i ON i.id = ig.item_id 
+        JOIN genre g ON g.id = ig.genre_id 
+        ORDER BY g.label ASC";
+        $stmt = $pdo->query($sql);
+        $item_genres = $stmt->fetchAll();
+
+        foreach ($genres as $g) {
+            printf('<div><input type="checkbox" value="%d" name="genre[]" id="%d"><label for="%d">%s</label></div>', $g['id'],  $g['id'], $g['id'], $g['label']);
+        }
+
+        ?>
+    </fieldset>
 
     <button class="button">Save</button>
 </form>

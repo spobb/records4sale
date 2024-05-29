@@ -26,6 +26,7 @@ if ($_GET['type'] == 'item') {
         <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
         <label for="label">Label</label>
         <input type="text" name="label" value="<?= $record['label']; ?>">
+
         <button class="button">Save</button>
     </form>
     <a href="index.php?page=listing" class="button">Cancel</a>
