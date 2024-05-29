@@ -1,14 +1,6 @@
 <?php
 require_once '../connection.php';
 
-$sql = "select id, genre_id from item";
-$stmt = $pdo->query($sql);
-$a = $stmt->fetchAll();
-
-var_dump($a);
-
-"INSERT INTO item_genre (item_id, genre_id) VALUES (?, ?)";
-
 // is an update ?
 if (empty($_POST['id'])) {
     switch ($_POST['type']) {

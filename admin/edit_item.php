@@ -10,8 +10,8 @@ $record = [
     'genre' => '',
     'category' => '',
     'artist_id' => '',
-    'genre_id' => '',
-    'category_id' => ''
+    'category_id' => '',
+    'genre_ids' => ''
 ];
 
 if (isset($_GET['id'])) {
