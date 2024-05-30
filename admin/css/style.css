@@ -1,5 +1,5 @@
 :root {
-	--radius: 0.5rem;
+	--radius: 0.2rem;
 	--accent: rgb(255, 136, 0);
 }
 
@@ -26,10 +26,10 @@ main {
 	margin: 1rem;
 }
 .button {
-	min-width: 8rem;
 	border: none;
 	display: inline-block;
 	padding: 0.5rem 1rem;
+	font-size: 0.8rem;
 	margin: 1rem;
 	text-decoration: none;
 	border-radius: var(--radius);
@@ -66,15 +66,22 @@ li > a {
 .tag {
 	padding: 0.25rem;
 	background-color: #333;
+	color: #999;
 	flex: content;
 	text-align: center;
 }
+.tag a {
+	color: #777;
+	vertical-align: middle;
+	font-weight: bold;
+}
 a {
 	text-align: center;
+	text-decoration: none;
 }
 label {
 	text-transform: uppercase;
-	font-weight: bold;
+	font-size: 0.8rem;
 }
 input {
 	margin: 0.75rem 0;
@@ -112,12 +119,6 @@ form {
 	display: flex;
 	flex-flow: column nowrap;
 }
-select {
-	color: #111;
-}
-option {
-	color: #111;
-}
 [readonly] {
 	background: #faa;
 	/* box-shadow: 0 0.25rem #f77; */
@@ -144,4 +145,40 @@ fieldset {
 	display: grid;
 	width: 50%;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+select {
+	color: #111;
+}
+option {
+	color: #111;
+}
+
+.save {
+	background: #9d6;
+	box-shadow: 0 0.5rem #8c4;
+	text-transform: uppercase;
+}
+.save:hover {
+	background: #8c4;
+	box-shadow: 0 0.25rem #5c1;
+}
+
+.cancel {
+	background: #fa7;
+	box-shadow: 0 0.5rem #e95;
+	text-transform: uppercase;
+}
+.cancel:hover {
+	background: #e95;
+	box-shadow: 0 0.25rem #e62;
+}
+
+.delete {
+	background: #f77;
+	box-shadow: 0 0.5rem #e55;
+	text-transform: uppercase;
+}
+.delete:hover {
+	background: #e55;
+	box-shadow: 0 0.25rem #e22;
 }

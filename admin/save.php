@@ -1,6 +1,8 @@
 <?php
 require_once '../connection.php';
 
+var_dump($_POST);
+
 // is an update ?
 if (empty($_POST['id'])) {
     switch ($_POST['type']) {
@@ -46,14 +48,14 @@ if (empty($_POST['id'])) {
                 $_POST['id']
             ]);
             foreach ($_POST['genre'] as $g) {
-                // $sql = 'UPDATE item_genre SET item_id=?, genre_id=? WHERE item_id = ?';
+                // $sql = 'UPDATE item_genre SET item_id = ?, genre_id = ? WHERE item_id = ?';
                 // $stmt = $pdo->prepare($sql);
                 // $stmt->execute([
                 //     $_POST['id'],
                 //     $g,
                 //     $_POST['id'],
                 // ]);
-                $sql = 'INSERT INTO item_genre (item_id, genre_id) VALUES (?, ?)';
+                $sql = 'REPLACE INTO item_genre (item_id, genre_id) VALUES (?, ?)';
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute([
                     $_POST['id'],
@@ -68,4 +70,4 @@ if (empty($_POST['id'])) {
             break;
     }
 }
-// header('Location: index.php?page=listing');
+header('Location: index.php?page=listing');
