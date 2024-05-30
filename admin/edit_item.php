@@ -130,9 +130,7 @@ function create_select(string $name, array $table, array $record)
         <?php
         foreach ($genres as $g) {
             echo '<div><input type="checkbox" value="' . $g['id'] . '" name="genre[]" id="' . $g['id'] . '"';
-            if (in_array($g['id'], $genre)) {
-                echo 'checked';
-            }
+            echo in_array($g['id'], $genre) ? 'checked' : '';
             echo '><label for="' . $g['id'] . '">' . $g['label'] . '</label></div>';
         }
         ?>

@@ -1,6 +1,6 @@
 :root {
 	--radius: 0.2rem;
-	--accent: rgb(255, 136, 0);
+	--accent: #54f;
 }
 
 *,
@@ -25,6 +25,35 @@ main {
 	flex-flow: column;
 	margin: 1rem;
 }
+ul {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between stretch;
+	list-style: none;
+	padding: 0.5rem;
+	gap: 0.25rem;
+	border-bottom-left-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+}
+ul::after {
+	content: '';
+	flex-grow: 2000;
+}
+li {
+	border: none;
+	border-radius: var(--radius);
+	background-color: #555;
+	flex: content;
+	text-align: center;
+}
+li > a {
+	padding: 0.5rem;
+	display: block;
+	text-decoration: none;
+}
+li:hover {
+	background-color: #55f;
+}
 .button {
 	border: none;
 	display: inline-block;
@@ -40,18 +69,6 @@ main {
 .button:hover {
 	box-shadow: 0 0.25rem #777;
 	transform: translateY(0.25rem);
-}
-li {
-	border: none;
-	border-radius: var(--radius);
-	background-color: #555;
-	flex: content;
-	text-align: center;
-}
-li > a {
-	padding: 0.5rem;
-	display: block;
-	text-decoration: none;
 }
 .tags {
 	display: flex;
@@ -94,20 +111,7 @@ input {
 }
 input:focus {
 	outline: none;
-}
-ul {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-between stretch;
-	list-style: none;
-	padding: 0.5rem;
-	gap: 0.25rem;
-	border-bottom-left-radius: var(--radius);
-	border-bottom-right-radius: var(--radius);
-}
-ul::after {
-	content: '';
-	flex-grow: 2000;
+	background: var(--accent);
 }
 hr {
 	border: 0;
@@ -160,7 +164,7 @@ option {
 }
 .save:hover {
 	background: #8c4;
-	box-shadow: 0 0.25rem #5c1;
+	box-shadow: 0 0.25rem #3c0;
 }
 
 .cancel {
@@ -170,7 +174,7 @@ option {
 }
 .cancel:hover {
 	background: #e95;
-	box-shadow: 0 0.25rem #e62;
+	box-shadow: 0 0.25rem #f85;
 }
 
 .delete {
