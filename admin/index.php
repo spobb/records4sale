@@ -1,5 +1,6 @@
 <?php
 require '../connection.php';
+require 'app/include.php';
 
 $page = 'listing.php';
 

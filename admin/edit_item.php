@@ -57,59 +57,18 @@ ORDER BY g.label ASC";
 $stmt = $pdo->query($sql);
 $item_genres = $stmt->fetchAll();
 
-
-function create_input(string $name, string $type, $value)
-{
-    $r = '';
-    if ($type == 'hidden' or $name == 'type') {
-        $r .= '<input type="' . $type . '" name="' . $name . '" value="' . $value . '" readonly>';
-    } else {
-        $r .= '<label for="' . $name . '">' . $name . '</label>';
-        $r .= '<input type="' . $type . '" name="' . $name . '" value="' . $value . '">';
-    }
-    return $r;
-}
-
-function create_select(string $name, array $table, array $record)
-{
-    $ret = '';
-    $ret .= sprintf('<label for "%1$s">%1$s</label><select name="%1$s">', $name);
-    foreach ($table as $t) {
-        if ($t['id'] === $record[$name . '_id']) {
-            $ret .= sprintf('<option value="%d"selected>%s</option>', $t['id'], $t['label']);
-        } else {
-            $ret .= sprintf('<option value="%d">%s</option>', $t['id'], $t['label']);
-        }
-    }
-    return $ret .= '</select>';
-}
 ?>
 
 <form action="save.php" method="POST" class="form">
     <?php
-    echo create_input('type', 'text', $_GET['type']),
+    echo
+    create_input('type', 'text', $_GET['type']),
     create_input('id', 'hidden', $record['id']),
     create_input('label', 'text', $record['label']),
     create_input('price', 'number', $record['price']),
     create_input('release', 'number', $record['release']),
     create_input('runtime', 'number', $record['runtime']);
-    ?>
-    <!-- 
-    <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
 
-    <label for="label">Label</label>
-    <input type="text" name="label" value="<?= $record['label']; ?>">
-
-    <label for="price">Price</label>
-    <input type="number" step="0.01" name="price" value="<?= $record['price']; ?>">
-
-    <label for="release">Release Date</label>
-    <input type="number" name="release" value="<?= $record['release']; ?>">
-
-    <label for="runtime">Runtime</label>
-    <input type="number" name="runtime" value="<?= $record['runtime']; ?>"> -->
-
-    <?php
     echo create_select('artist', $artists, $record);
     echo create_select('category', $categories, $record);
     ?>
