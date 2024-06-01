@@ -48,18 +48,19 @@ if (empty($_POST['id'])) {
                 $_POST['id']
             ]);
             foreach ($_POST['genre'] as $g) {
-                // $sql = 'UPDATE item_genre SET item_id = ?, genre_id = ? WHERE item_id = ?';
-                // $stmt = $pdo->prepare($sql);
-                // $stmt->execute([
-                //     $_POST['id'],
-                //     $g,
-                //     $_POST['id'],
-                // ]);
                 $sql = 'REPLACE INTO item_genre (item_id, genre_id) VALUES (?, ?)';
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute([
                     $_POST['id'],
                     $g
+                ]);
+            }
+            foreach ($_POST['song'] as $s) {
+                $sql = 'REPLACE INTO tracklist (item_id, song_id) VALUES (?, ?)';
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    $_POST['id'],
+                    $s
                 ]);
             }
             break;

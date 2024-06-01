@@ -13,16 +13,20 @@ $record = [
     'category' => '',
     'artist_id' => '',
     'category_id' => '',
-    'genre_ids' => ''
+    'genre_ids' => '',
+    'song_ids' => ''
 ];
 
 // check if ID is set
 
 if (!empty($_GET['id'])) {
-    $sql = 'SELECT item.*, GROUP_CONCAT(genre.id) as genre_ids  
+    $sql = 'SELECT item.*, GROUP_CONCAT(DISTINCT genre.id) as genre_ids
+    ,GROUP_CONCAT(DISTINCT song.id) as song_ids
     FROM item 
     LEFT JOIN item_genre ON item_genre.item_id = item.id
     LEFT JOIN genre ON item_genre.genre_id = genre.id 
+    LEFT JOIN tracklist ON tracklist.item_id = item.id
+    LEFT JOIN song ON tracklist.song_id = song.id 
     WHERE item.id = ?
     GROUP BY item.id';
     $stmt = $pdo->prepare($sql);
@@ -47,15 +51,14 @@ $sql = 'SELECT * FROM genre ORDER BY label ASC';
 $stmt = $pdo->query($sql);
 $genres = $stmt->fetchAll();
 
-// item_genres query
+//song query
 
-$sql = "SELECT *, i.label as item, g.label as genre 
-FROM item_genre ig 
-JOIN item i ON i.id = ig.item_id 
-JOIN genre g ON g.id = ig.genre_id 
-ORDER BY g.label ASC";
+$sql = 'SELECT * FROM song ORDER BY label ASC';
 $stmt = $pdo->query($sql);
-$item_genres = $stmt->fetchAll();
+$songs = $stmt->fetchAll();
+
+$genre = explode(',', $record['genre_ids']);
+$song = explode(',', $record['song_ids']);
 
 ?>
 
@@ -75,7 +78,6 @@ $item_genres = $stmt->fetchAll();
 
     <div class="tags">
         <?php
-        $genre = explode(',', $record['genre_ids']);
         foreach ($genres as $g) {
             if (in_array($g['id'], $genre)) {
                 printf('<span class="tag">
@@ -88,15 +90,26 @@ $item_genres = $stmt->fetchAll();
     <fieldset>
         <?php
         foreach ($genres as $g) {
-            echo '<div><input type="checkbox" value="' . $g['id'] . '" name="genre[]" id="' . $g['id'] . '"';
+            echo '<div><input type="checkbox" value="' . $g['id'] . '" name="genre[]" id="genre_' . $g['id'] . '"';
             echo in_array($g['id'], $genre) ? 'checked' : '';
-            echo '><label for="' . $g['id'] . '">' . $g['label'] . '</label></div>';
+            echo '><label for="genre_' . $g['id'] . '">' . $g['label'] . '</label></div>';
         }
         ?>
     </fieldset>
-    <!-- <label for="genre">Select genres:
-        <select name="genre" class="multi-select"></select>
-    </label> -->
+    <hr>
+    <div class="tags multi-select-selected">
+    </div>
+    <label for="song[]">Pick your songs:</label>
+    <select class="multi-select" name="song[]">
+        <?php
+        foreach ($songs as $s) {
+            echo '<option value="' . $s['id'] . '" id="song_' . $s['id'] . '">' . $s['label'] . '</option>';
+            // echo in_array($s['id'], $song) ? 'checked' : '';
+
+            // echo '<span>Title: ' . $s['label'] . ' ID: ' . $s['id'] . '</span><br>';
+        }
+        ?>
+    </select>
 
     <button class="button save">Save</button>
 </form>
@@ -109,4 +122,4 @@ $item_genres = $stmt->fetchAll();
     <button class="button delete">Delete</button>
 </form>
 
-<script src="js/multiselect.js"></script>
+<script src="js/select.js"></script>
