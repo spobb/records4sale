@@ -21,20 +21,21 @@ if ($_GET['type'] == 'item') {
 } else {
 ?>
     <form action="save.php" method="POST" class="form">
-        <label for="type">Type</label>
-        <input type="text" name="type" value="<?= $_GET['type']; ?>" readonly>
-        <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
-        <label for="label">Label</label>
-        <input type="text" name="label" value="<?= $record['label']; ?>">
-
+        <?=
+        create_input('type', 'text', $_GET['type']),
+        create_input('id', 'hidden', $record['id']),
+        create_input('label', 'text', $record['label']);
+        ?>
         <button class="button save">Save</button>
     </form>
     <a href="index.php?page=listing" class="button cancel">Cancel</a>
     <form action="delete.php" method="POST" class="form">
-        <input type="hidden" name="type" value="<?= $_GET['type']; ?>" readonly>
-        <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
-        <input type="hidden" name="confirmed" value="false" readonly>
-        <input type="hidden" name="label" value="<?= $record['label']; ?>" readonly>
+        <?=
+        create_input('type', 'hidden', $_GET['type']),
+        create_input('id', 'hidden', $record['id']),
+        create_input('label', 'hidden', $record['label']),
+        create_input('confirmed', 'hidden', 'false')
+        ?>
         <button class="button delete">Delete</button>
     </form>
 <?php } ?>

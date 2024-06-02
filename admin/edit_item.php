@@ -115,10 +115,12 @@ $song = explode(',', $record['song_ids']);
 </form>
 <a href="index.php?page=listing" class="button cancel">Cancel</a>
 <form action="delete.php" method="POST" class="form">
-    <input type="hidden" name="type" value="<?= $_GET['type']; ?>" readonly>
-    <input type="hidden" name="id" value="<?= $record['id']; ?>" readonly>
-    <input type="hidden" name="confirmed" value="false" readonly>
-    <input type="hidden" name="label" value="<?= $record['label']; ?>" readonly>
+    <?=
+    create_input('type', 'hidden', $_GET['type']),
+    create_input('id', 'hidden', $record['id']),
+    create_input('label', 'hidden', $record['label']),
+    create_input('confirmed', 'hidden', 'false')
+    ?>
     <button class="button delete">Delete</button>
 </form>
 
