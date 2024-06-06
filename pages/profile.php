@@ -1,5 +1,5 @@
 <div class="profile-hero wrapper">
-    <h1>Hello, <?= $_SESSION['user']; ?></h1>
+    <h1>Hello, <?= $_SESSION['name']; ?></h1>
 </div>
 <main>
 

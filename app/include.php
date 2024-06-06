@@ -50,3 +50,17 @@ function create_folders(array $results)
         mkdir($dir, 0777, true);
     }
 }
+
+// validate login credentials
+
+function validate_credentials($user, $pass, $pdo)
+{
+    $sql = 'SELECT * FROM `user` WHERE `email` = ?';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$user]);
+    $users = $stmt->fetch();
+
+    var_dump($pass, $users, password_verify($pass, $users['password']));
+
+    return (!empty($users) && password_verify($pass, $users['password']));
+}
