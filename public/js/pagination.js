@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	const queryBig = window.matchMedia('(min-width: 1024px)');
 	const queryMed = window.matchMedia('(min-width: 768px)');
 
-	queryMed.matches ? (queryBig.matches ? (perPage = 16) : (perPage = 12)) : (perPage = 8);
+	queryMed.matches
+		? queryBig.matches
+			? (perPage = 16)
+			: (perPage = 12)
+		: (perPage = 8);
 
 	// get elements
 
@@ -34,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		for (i = 0; i < pages; ++i) {
 			const pageButton = document.createElement('button');
 			pageButton.textContent = i + 1;
-			pageButton.addEventListener('click', (e) => {
+			pageButton.addEventListener('click', e => {
 				currentPage = e.target.innerText - 1;
 				show(currentPage);
 				selectedPage(currentPage);
@@ -55,7 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	pageButtons();
-	show(currentPage);
-	selectedPage(currentPage);
+	if (items.length > perPage) {
+		pageButtons();
+		show(currentPage);
+		selectedPage(currentPage);
+	}
 });
