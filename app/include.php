@@ -60,7 +60,5 @@ function validate_credentials($user, $pass, $pdo)
     $stmt->execute([$user]);
     $users = $stmt->fetch();
 
-    var_dump($pass, $users, password_verify($pass, $users['password']));
-
     return (!empty($users) && password_verify($pass, $users['password']));
 }

@@ -15,9 +15,9 @@ function create_input(string $name, string $type, $value)
 {
     $r = '';
     if ($type == 'hidden' or $name == 'type') {
-        $r .= sprintf('<input type="%s" name="%s" value="%g" readonly>', $name, $type, $value);
+        $r .= sprintf('<input type="%s" name="%s" value="' . $value . '" readonly>', $type, $name);
     } else {
-        $r = sprintf('<label for="%1$s">%1$s</label><input type="%2$s" name="%1$s" value="%3$g">', $name, $type, $value);
+        $r = sprintf('<label for="%1$s">%1$s</label><input type="%2$s" name="%1$s" value="' . $value . '">', $name, $type);
     }
     return $r;
 }

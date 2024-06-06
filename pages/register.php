@@ -12,7 +12,6 @@
 $response = '';
 
 if (!empty($_POST)) {
-    // if (!validate_credentials($_POST['user'], $_POST['pass'], $pdo)) {
     $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
     $sql = 'INSERT INTO user (`email`, `password`) VALUES (?, ?)';
