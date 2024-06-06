@@ -1,7 +1,6 @@
 <?php
-function create_tab(string $header, string $table_name)
+function create_tab(string $header, string $table_name, $pdo)
 {
-    global $pdo;
     echo '<div class="' . $table_name . ' tab"><header><h1>' . $header . '</h1><form action="index.php?page=edit" method="get"><input type="hidden" name="page" value="edit"><input type="hidden" name="type" value="' . $table_name . '"><button class="button">New</button></form></header><ul>';
     $stmt = $pdo->query('SELECT * FROM ' . $table_name . ' ORDER BY label ASC');
     while ($row = $stmt->fetch()) {
@@ -10,17 +9,20 @@ function create_tab(string $header, string $table_name)
     echo '</ul></div>';
 }
 
+// creates input element with given label, type to use and default value
+
 function create_input(string $name, string $type, $value)
 {
     $r = '';
     if ($type == 'hidden' or $name == 'type') {
-        $r .= '<input type="' . $type . '" name="' . $name . '" value="' . $value . '" readonly>';
+        $r .= sprintf('<input type="%s" name="%s" value="%g" readonly>', $name, $type, $value);
     } else {
-        $r .= '<label for="' . $name . '">' . $name . '</label>';
-        $r .= '<input type="' . $type . '" name="' . $name . '" value="' . $value . '">';
+        $r = sprintf('<label for="%1$s">%1$s</label><input type="%2$s" name="%1$s" value="%3$g">', $name, $type, $value);
     }
     return $r;
 }
+
+// creates select element with given label, table[] to use and record[] for the ID
 
 function create_select(string $name, array $table, array $record)
 {

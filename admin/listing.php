@@ -1,10 +1,10 @@
 <div class="wrapper">
     <?php
-    create_tab('Artists', 'artist');
-    create_tab('Genres', 'genre');
-    create_tab('Categories', 'category');
-    create_tab('Songs', 'song');
-    create_tab('Items', 'item');
+    create_tab('Artists', 'artist', $pdo);
+    create_tab('Genres', 'genre', $pdo);
+    create_tab('Categories', 'category', $pdo);
+    create_tab('Songs', 'song', $pdo);
+    create_tab('Items', 'item', $pdo);
     ?>
 
 </div>
