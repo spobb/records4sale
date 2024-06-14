@@ -1,7 +1,7 @@
 <?php
 //database connection
 session_start();
-$_SESSION['active'] == $_SESSION['active'] ? true : false;
+$_SESSION['active'] = $_SESSION['active'] ? true : false;
 
 require_once 'connection.php';
 require_once 'app/include.php';
