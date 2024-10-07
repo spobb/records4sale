@@ -28,7 +28,7 @@
 	--extra: #aaa;
 	--border: #ccc;
 
-	--bdr-rad: 1rem;
+	--bdr-rad: 0rem;
 
 	--bx-shadow: 0 10px 5px -2px #0002;
 	--gradient: linear-gradient(45deg, var(--accent) 20%, var(--accent2) 80%);

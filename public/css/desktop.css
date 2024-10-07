@@ -33,7 +33,22 @@ body > header nav {
 	justify-content: flex-start;
 }
 .home {
-	background: text no-repeat center/121% linear-gradient(45deg, #ca4246 14%, #e16541 14%, #e16541 28%, #f18f43 28%, #f18f43 42%, #8b9862 42%, #8b9862 56%, #476098 56%, #476098 70%, #a7489b 70%, #a7489b 84%, #111 84%);
+	background: text no-repeat center/121%
+		linear-gradient(
+			45deg,
+			#ca4246 14%,
+			#e16541 14%,
+			#e16541 28%,
+			#f18f43 28%,
+			#f18f43 42%,
+			#8b9862 42%,
+			#8b9862 56%,
+			#476098 56%,
+			#476098 70%,
+			#a7489b 70%,
+			#a7489b 84%,
+			#111 84%
+		);
 	background-position-x: 0px;
 	transition: color 350ms, scale 500ms;
 }
@@ -146,7 +161,7 @@ body > header nav {
 	font-size: 0.9rem;
 }
 .item-card:hover {
-	scale: 105%;
+	scale: 102%;
 }
 .svg {
 	width: 2rem;

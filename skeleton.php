@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="public/css/queries.css" media="(min-width:576px)">
     <link rel="stylesheet" href="public/css/desktop.css" media="(min-width:1024px)">
 
+    <!-- load font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZOIHQ.woff2" crossorigin as="font" type="font/woff2">
+
+    <!-- preload hero image -->
+
+    <link rel="preload" as="image" href="public/assets/herohalf.jpg">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/da76ef87bd.js" crossorigin="anonymous"></script>
 
@@ -37,13 +44,14 @@
             </div>
             <ul class="nav-buttons">
                 <li>
-                    <a href="index.php?page=contact">Contact</a>
+                    <!-- <a href="index.php?page=contact"><button class="header-button">Contact Us</button></a> -->
+                    <a href="index.php?page=contact" class="header-button">Contact Us</a>
                 </li>
                 <?php
                 if ($_SESSION['active']) {
                 ?>
                     <li class="logout">
-                        <a href="index.php?page=logout"><button class="header-button">Sign out</button></a>
+                        <a href="index.php?page=logout" class="header-button">Sign out</a>
                     </li>
                     <li class="profile header-icon">
                         <a href="index.php?page=profile">
@@ -54,10 +62,10 @@
                 } else {
                 ?>
                     <li>
-                        <a href="index.php?page=register"><button class="header-button">Sign up</button></a>
+                        <a href="index.php?page=register" class=" header-button">Sign up</a>
                     </li>
                     <li>
-                        <a href="index.php?page=login"><button class="header-button">Sign in</button></a>
+                        <a href="index.php?page=login" class="header-button">Sign in</a>
                     </li>
                 <?php
                 }
